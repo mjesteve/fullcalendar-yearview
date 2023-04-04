@@ -1,14 +1,19 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
+//https://github.com/midudev/webpack-paso-a-paso-live-coding/blob/master/webpack.config.js
+const HtmlWebpackPugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+    devtool: "sourcemap",
     entry: './src/main.ts',
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader'
+                loader: 'awesome-typescript-loader',
+                exclude: /node_modules/
             },
             {
                 test: /\.s?css$/,
@@ -24,6 +29,9 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
+
+        new CleanWebpackPlugin(),
+
         new MiniCssExtractPlugin({
             filename: "[name].css",
             chunkFilename: "[id].css"
@@ -33,12 +41,21 @@ module.exports = {
         // 'FullCalendar' in the compiled ES5 file
         new ReplaceInFileWebpackPlugin([{
             dir: 'dist',
-            files: ['main.js'],
+            //files: ['main.[contenthash].js'], //not working
+            test: /\.js$/,
             rules: [{
                 search: /@fullcalendar\/core/g,
                 replace: 'FullCalendar'
             }]
-        }])
+        }]),
+        
+        new HtmlWebpackPugin({
+            //template: path.resolve(__dirname, 'src', 'index.html'),
+            //filename: path.resolve(__dirname, 'dist', 'index.html'),
+            template: 'src/index.html',
+            filename: "dist/index.html",
+            inject: false
+        }),
     ],
     optimization: {
         minimize: false
@@ -46,9 +63,10 @@ module.exports = {
     externals: /(fullcalendar|moment)/i,
     output: {
         library: "FullCalendarYearView",
-        libraryTarget: "umd",
+        libraryTarget: "var",
         globalObject: "this",
-        filename: 'main.js',
+        filename: 'main.[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
-    }
+        devtoolModuleFilenameTemplate: '[absolute-resource-path]'
+    },
 };

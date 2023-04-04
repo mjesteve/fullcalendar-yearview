@@ -73,8 +73,8 @@ export default class SimpleDayGrid extends DateComponent<SimpleDayGridProps> {
         dateSpan: rawHit.dateSpan,
         dayEl: rawHit.dayEl,
         rect: {
-          left: rawHit.relativeRect.left,
-          right: rawHit.relativeRect.right,
+          left: rawHit.relativeRect.left - this.dayGrid.colPositions.lefts[0],
+          right: rawHit.relativeRect.right - this.dayGrid.colPositions.lefts[0],
           top: rawHit.relativeRect.top,
           bottom: rawHit.relativeRect.bottom
         },

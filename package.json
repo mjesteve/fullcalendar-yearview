@@ -7,26 +7,34 @@
   "docs": "TODO",
   "browserGlobal": "FullCalendarYearView",
   "dependencies": {
+    "@fullcalendar/core": "4.3.1",
     "moment": "^2.24.0",
-    "@fullcalendar/core": "4.3.1"
+    "@fullcalendar/daygrid": "4.3.0",
+    "@fullcalendar/interaction": "^4.3.0"
   },
   "devDependencies": {
-    "@fullcalendar/daygrid": "4.3.0",
-    "@fullcalendar/interaction": "^4.3.0",
+    "@types/node": "^13.13.14",
     "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^4.5.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "replace-in-file-webpack-plugin": "^1.0.6",
     "sass-loader": "^8.0.2",
+    "ts-loader": "^6.2.1",
     "tslib": "^1.10.0",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
     "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "buildprod": "webpack --mode production",
+    "builddev": "webpack --mode development",
+    "builddevwatch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open ./dist/index.html",
+    "start2": "webpack-dev-server -d"
   }
 }

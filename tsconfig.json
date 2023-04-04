@@ -15,6 +15,7 @@
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": true,
+    "rootDir": "src",
     "outDir": "tmp/tsc-output",
     "sourceMap": true
   },
