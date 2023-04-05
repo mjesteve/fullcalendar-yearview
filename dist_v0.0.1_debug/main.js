@@ -1530,7 +1530,7 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
         var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
         var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
         var startCol = leftCol;
-        var endCol = rightCol + 1;
+        var endCol = rightCol; // + 1 Hiedra
         var className;
         var skeletonEl;
         var trEl;
@@ -2068,8 +2068,8 @@ var SimpleDayGrid = /** @class */ (function (_super) {
                 dateSpan: rawHit.dateSpan,
                 dayEl: rawHit.dayEl,
                 rect: {
-                    left: rawHit.relativeRect.left - this.dayGrid.colPositions.lefts[0],
-                    right: rawHit.relativeRect.right - this.dayGrid.colPositions.lefts[0],
+                    left: rawHit.relativeRect.left,
+                    right: rawHit.relativeRect.right,
                     top: rawHit.relativeRect.top,
                     bottom: rawHit.relativeRect.bottom
                 },
@@ -2250,4 +2250,4 @@ module.exports = moment;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.0608b9cba416d257a04b.js.map
+//# sourceMappingURL=main.js.map

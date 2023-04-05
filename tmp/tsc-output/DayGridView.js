@@ -3,11 +3,14 @@ import { DayHeader, memoize, DaySeries } from '@fullcalendar/core';
 import AbstractDayGridView from './AbstractDayGridView';
 import SimpleDayGrid from './SimpleDayGrid';
 import DayTable from "./DayTable";
+import { locale as momentsetlocale } from 'moment'; //Hiedra
 var DayGridView = /** @class */ (function (_super) {
     __extends(DayGridView, _super);
     function DayGridView(_context, viewSpec, dateProfileGenerator, parentEl) {
         var _this = _super.call(this, _context, viewSpec, dateProfileGenerator, parentEl) || this;
         _this.buildDayTable = memoize(buildDayTable);
+        //set moment locale
+        momentsetlocale(_this.context.dateEnv.locale.codeArg.toString()); //Hiedra
         if (_this.opt('columnHeader')) {
             _this.header = new DayHeader(_this.context, _this.el.querySelector('.fc-head-container'));
         }

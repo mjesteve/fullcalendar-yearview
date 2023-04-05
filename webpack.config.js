@@ -7,6 +7,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     devtool: "sourcemap",
+    devServer: {
+        port: 9000,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
+    },
     entry: './src/main.ts',
     module: {
         rules: [
@@ -30,7 +36,7 @@ module.exports = {
     },
     plugins: [
 
-        new CleanWebpackPlugin(),
+        //new CleanWebpackPlugin(),
 
         new MiniCssExtractPlugin({
             filename: "[name].css",
@@ -42,7 +48,8 @@ module.exports = {
         new ReplaceInFileWebpackPlugin([{
             dir: 'dist',
             //files: ['main.[contenthash].js'], //not working
-            test: /\.js$/,
+            //test: /\.js$/, //working
+            files: ['main.js'],
             rules: [{
                 search: /@fullcalendar\/core/g,
                 replace: 'FullCalendar'
@@ -51,9 +58,8 @@ module.exports = {
         
         new HtmlWebpackPugin({
             //template: path.resolve(__dirname, 'src', 'index.html'),
-            //filename: path.resolve(__dirname, 'dist', 'index.html'),
             template: 'src/index.html',
-            filename: "dist/index.html",
+            filename: "index.html",
             inject: false
         }),
     ],
@@ -65,7 +71,7 @@ module.exports = {
         library: "FullCalendarYearView",
         libraryTarget: "var",
         globalObject: "this",
-        filename: 'main.[contenthash].js',
+        filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
         devtoolModuleFilenameTemplate: '[absolute-resource-path]'
     },

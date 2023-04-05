@@ -38,7 +38,7 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
         var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
         var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
         var startCol = leftCol;
-        var endCol = rightCol + 1;
+        var endCol = rightCol; // + 1 Hiedra
         var className;
         var skeletonEl;
         var trEl;

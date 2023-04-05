@@ -57,7 +57,7 @@ export default class DayGridFillRenderer extends FillRenderer {
     let leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol
     let rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol
     let startCol = leftCol
-    let endCol = rightCol + 1
+    let endCol = rightCol // + 1 Hiedra
     let className
     let skeletonEl: HTMLElement
     let trEl: HTMLTableRowElement

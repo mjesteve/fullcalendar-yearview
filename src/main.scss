@@ -103,9 +103,14 @@
     left: 1.25em !important;
   }
 
+  /* Add.Hiedra. .fc-row .fc-highlight-skeleton. The selection must be moved by the width of the "month name" column. */
+  .fc-row .fc-highlight-skeleton {
+    left: 1.25em;
+    z-index: 3;
+  }
+
   .fc-day-number-weekday {
     padding-right: .3em;
     color: #aaa;
   }
-
 }
