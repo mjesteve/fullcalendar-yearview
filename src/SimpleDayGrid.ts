@@ -4,7 +4,7 @@ import {
   EventUiHash,
   DateSpan,
   EventInteractionState,
-  DayTable,
+  //DayTable, //hiedra
   Duration,
   DateComponent,
   DateRange,
@@ -13,6 +13,7 @@ import {
   ComponentContext
 } from '@fullcalendar/core'
 import { default as DayGrid, DayGridSeg } from './DayGrid'
+import { default as DayTable } from "./DayTable"; //hiedra
 
 export interface SimpleDayGridProps {
   dateProfile: DateProfile | null
