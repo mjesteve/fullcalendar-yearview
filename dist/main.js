@@ -885,7 +885,7 @@ var DayGrid = /** @class */ (function (_super) {
         var _a = this, colPositions = _a.colPositions, rowPositions = _a.rowPositions;
         var col = colPositions.leftToIndex(leftPosition);
         var row = rowPositions.topToIndex(topPosition);
-        if (row != null && col != null) {
+        if (row != null && col != null && this.props.cells[row][col].date !== null) {
             return {
                 row: row,
                 col: col,
@@ -1372,7 +1372,7 @@ var DayGridEventRenderer = /** @class */ (function (_super) {
                     // create a container that occupies or more columns. append the event element.
                     td = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"])('td', { className: 'fc-event-container' }, seg.el);
                     if (leftCol !== rightCol) {
-                        td.colSpan = rightCol - leftCol + 1;
+                        td.colSpan = rightCol - leftCol; //+ 1 Hiedra
                     }
                     else { // a single-column segment
                         loneCellMatrix[i][col] = td;
@@ -1549,7 +1549,8 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
             // will create (startCol + 1) td's
             new Array(startCol + 1).join(EMPTY_CELL_HTML));
         }
-        seg.el.colSpan = endCol - startCol;
+        if (endCol != startCol) //hiedra
+            seg.el.colSpan = endCol - startCol;
         trEl.appendChild(seg.el);
         if (endCol < colCnt) {
             Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["appendToElement"])(trEl, 

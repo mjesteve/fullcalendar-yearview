@@ -5,7 +5,7 @@
   /* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
   /* week and day number styling */
   /* when week/day number have own column */
-  /* Add.Hiedra. The selection must be moved by the width of the "month name" column. */ }
+  /* Add.Hiedra. .fc-row .fc-highlight-skeleton. The selection must be moved by the width of the "month name" column. */ }
   .fc-year-container .fc-dayGridWeek-view .fc-content-skeleton,
   .fc-year-container .fc-dayGridDay-view .fc-content-skeleton {
     /* there may be week numbers in these views, so no padding-top */

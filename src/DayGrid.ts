@@ -463,7 +463,7 @@ export default class DayGrid extends DateComponent<DayGridProps> {
     let col = colPositions.leftToIndex(leftPosition)
     let row = rowPositions.topToIndex(topPosition)
 
-    if (row != null && col != null) {
+    if (row != null && col != null && this.props.cells[row][col].date !== null) {
       return {
         row,
         col,
@@ -473,8 +473,8 @@ export default class DayGrid extends DateComponent<DayGridProps> {
         },
         dayEl: this.getCellEl(row, col),
         relativeRect: {
-          left: colPositions.lefts[col],
-          right: colPositions.rights[col],
+          left: colPositions.lefts[col], // + (leftPosition - this.colPositions.lefts[0]),
+          right: colPositions.rights[col], // + (leftPosition - this.colPositions.lefts[0]),
           top: rowPositions.tops[row],
           bottom: rowPositions.bottoms[row]
         }
