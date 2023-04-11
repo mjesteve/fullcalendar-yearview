@@ -82,7 +82,7 @@ var FullCalendarYearView =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -99,19 +99,10 @@ module.exports = moment;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: ./src/main.scss
-var main = __webpack_require__(2);
 
 // EXTERNAL MODULE: external "FullCalendar"
 var core_ = __webpack_require__(0);
@@ -635,7 +626,7 @@ var DayGridEventRenderer_DayGridEventRenderer = /** @class */ (function (_super)
                     // create a container that occupies or more columns. append the event element.
                     td = Object(core_["createElement"])('td', { className: 'fc-event-container' }, seg.el);
                     if (leftCol !== rightCol) {
-                        td.colSpan = rightCol - leftCol + 1;
+                        td.colSpan = rightCol - leftCol; //+ 1 Hiedra
                     }
                     else { // a single-column segment
                         loneCellMatrix[i][col] = td;
@@ -776,7 +767,12 @@ var DayGridMirrorRenderer_DayGridMirrorRenderer = /** @class */ (function (_supe
 }(src_DayGridEventRenderer));
 /* harmony default export */ var src_DayGridMirrorRenderer = (DayGridMirrorRenderer_DayGridMirrorRenderer);
 
+// EXTERNAL MODULE: external "moment"
+var external_moment_ = __webpack_require__(1);
+var external_moment_default = /*#__PURE__*/__webpack_require__.n(external_moment_);
+
 // CONCATENATED MODULE: ./src/DayGridFillRenderer.ts
+
 
 
 var EMPTY_CELL_HTML = '<td style="pointer-events:none"></td>';
@@ -816,6 +812,11 @@ var DayGridFillRenderer_DayGridFillRenderer = /** @class */ (function (_super) {
         var colCnt = dayGrid.colCnt, isRtl = dayGrid.isRtl;
         var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
         var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
+        //Hiedra: skip invalid dates
+        if (!isRtl) { //TODO: isRtl
+            var aa = dayGrid.calendar.state.currentDate.getFullYear();
+            rightCol = Math.min(rightCol, external_moment_default()(new Date(aa, seg.row, 1)).daysInMonth() - 1);
+        }
         var startCol = leftCol;
         var endCol = rightCol; // + 1 Hiedra
         var className;
@@ -836,12 +837,15 @@ var DayGridFillRenderer_DayGridFillRenderer = /** @class */ (function (_super) {
             // will create (startCol + 1) td's
             new Array(startCol + 1).join(EMPTY_CELL_HTML));
         }
-        seg.el.colSpan = endCol - startCol;
+        seg.el.colSpan = endCol - startCol + 1; //hiedra (add +1)
         trEl.appendChild(seg.el);
-        if (endCol < colCnt) {
+        //if (endCol < colCnt) { //hiedra
+        if (endCol < colCnt - 1) {
             Object(core_["appendToElement"])(trEl, 
             // will create (colCnt - endCol) td's
-            new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML));
+            //new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML)
+            new Array(colCnt - endCol).join(EMPTY_CELL_HTML) //hiedra
+            );
         }
         var introHtml = dayGrid.renderProps.renderIntroHtml();
         if (introHtml) {
@@ -992,10 +996,6 @@ function renderCellHtml(date, dateProfile, context, otherAttrs) {
             '') +
         '></td>';
 }
-
-// EXTERNAL MODULE: external "moment"
-var external_moment_ = __webpack_require__(1);
-var external_moment_default = /*#__PURE__*/__webpack_require__.n(external_moment_);
 
 // CONCATENATED MODULE: ./src/DayGrid.ts
 
@@ -1244,7 +1244,7 @@ var DayGrid_DayGrid = /** @class */ (function (_super) {
         var _a = this, colPositions = _a.colPositions, rowPositions = _a.rowPositions;
         var col = colPositions.leftToIndex(leftPosition);
         var row = rowPositions.topToIndex(topPosition);
-        if (row != null && col != null) {
+        if (row != null && col != null && this.props.cells[row][col].date !== null) {
             return {
                 row: row,
                 col: col,
@@ -1871,59 +1871,99 @@ var SimpleDayGrid_DayGridSlicer = /** @class */ (function (_super) {
 
 
 // CONCATENATED MODULE: ./src/DayTable.ts
-
-var DayTable_DayTable = /** @class */ (function () {
+var DayTable = /** @class */ (function () {
     function DayTable(daySeries, breakOnWeeks) {
+        this.rowCnt = 12;
+        this.colCnt = 31;
         this.daySeries = daySeries;
         this.cells = this.buildCells();
         this.headerDates = this.buildHeaderDates();
-        this.rowCnt = 12;
     }
     DayTable.prototype.buildCells = function () {
         var rows = [];
         var cells = [];
+        var inrows = [];
+        var inrow;
+        var tinvalid = 0;
         for (var i = 0; i < this.daySeries.dates.length; i++) {
             cells.push({ date: this.daySeries.dates[i] });
             if (this.daySeries.dates.length === (i + 1) || this.daySeries.dates[i + 1].getDate() === 1) {
+                inrow = { idxini: -1, idxfin: -1 };
                 for (var padding = this.daySeries.dates[i].getDate(); padding < 31; padding++) {
                     cells.push({
                         date: null
                     });
+                    if (inrow.idxini == -1) {
+                        inrow.idxini = tinvalid + i + 1;
+                        inrow.idxfin = tinvalid + i + 1;
+                    }
+                    else {
+                        inrow.idxfin = inrow.idxfin + 1;
+                    }
+                    tinvalid++;
                 }
+                if (inrow.idxini != -1)
+                    inrows.push(inrow);
                 rows.push(cells);
                 cells = [];
             }
         }
+        this.invalidIndex = inrows;
         return rows;
     };
     DayTable.prototype.buildHeaderDates = function () {
         return [];
     };
     DayTable.prototype.sliceRange = function (range) {
+        var colCnt = this.colCnt;
+        var seriesSeg = this.daySeries.sliceRange(range);
         var segs = [];
-        var firstMonthStart = external_moment_default()(range.start).startOf('month');
-        var currentMonthStart = external_moment_default()(range.start).startOf('month');
-        var currentMonthEnd = external_moment_default()(range.start).endOf('month');
-        var lastMonthStart = external_moment_default()(range.end).startOf('month');
-        if (lastMonthStart.year() > currentMonthStart.year()) {
-            lastMonthStart = currentMonthStart.clone().month(11).startOf('month');
-        }
-        while (currentMonthStart.isSameOrBefore(lastMonthStart)) {
-            segs.push({
-                row: currentMonthStart.month(),
-                firstCol: (currentMonthStart.isAfter(range.start)) ? 0 : range.start.getDate() - 1,
-                lastCol: (currentMonthEnd.isBefore(range.end)) ? currentMonthEnd.date() - 1 : range.end.getDate() - 1,
-                isStart: currentMonthStart.isSame(firstMonthStart),
-                isEnd: currentMonthStart.isSame(lastMonthStart)
-            });
-            currentMonthStart.add(1, 'months');
-            currentMonthEnd = currentMonthStart.clone().endOf('month');
+        if (seriesSeg) {
+            var firstIndex = seriesSeg.firstIndex, lastIndex = seriesSeg.lastIndex;
+            //Hiedra: skip invalid dates                
+            for (var r = 0; r < this.invalidIndex.length; r++) {
+                if (this.invalidIndex[r].idxini != -1) {
+                    var value = 0;
+                    if (firstIndex >= this.invalidIndex[r].idxini) {
+                        if (firstIndex >= this.invalidIndex[r].idxfin)
+                            value = this.invalidIndex[r].idxfin - this.invalidIndex[r].idxini + 1;
+                        else
+                            value = firstIndex - this.invalidIndex[r].idxini + 1;
+                        firstIndex += value;
+                        lastIndex += value;
+                    }
+                    else if (lastIndex >= this.invalidIndex[r].idxini) {
+                        if (lastIndex >= this.invalidIndex[r].idxfin)
+                            value = this.invalidIndex[r].idxfin - this.invalidIndex[r].idxini + 1;
+                        else
+                            value = firstIndex - this.invalidIndex[r].idxini + 1;
+                        lastIndex += value;
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            var index = firstIndex;
+            while (index <= lastIndex) {
+                var row = Math.floor(index / colCnt);
+                var nextIndex = Math.min((row + 1) * colCnt, lastIndex + 1);
+                //invalid date?
+                segs.push({
+                    row: row,
+                    firstCol: index % colCnt,
+                    lastCol: (nextIndex - 1) % colCnt,
+                    isStart: seriesSeg.isStart && index === firstIndex,
+                    isEnd: seriesSeg.isEnd && (nextIndex - 1) === lastIndex
+                });
+                index = nextIndex;
+            }
         }
         return segs;
     };
     return DayTable;
 }());
-/* harmony default export */ var src_DayTable = (DayTable_DayTable);
+/* harmony default export */ var src_DayTable = (DayTable);
 
 // CONCATENATED MODULE: ./src/DayGridView.ts
 
@@ -1988,10 +2028,10 @@ function buildDayTable(dateProfile, dateProfileGenerator) {
 }
 
 // CONCATENATED MODULE: ./src/main.ts
+//import './main.scss'
 
 
-
-/* harmony default export */ var src_main = __webpack_exports__["default"] = (Object(core_["createPlugin"])({
+/* harmony default export */ var main = __webpack_exports__["default"] = (Object(core_["createPlugin"])({
     defaultView: 'year',
     views: {
         yearGrid: src_DayGridView,
@@ -2005,4 +2045,3 @@ function buildDayTable(dateProfile, dateProfileGenerator) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.js.map
