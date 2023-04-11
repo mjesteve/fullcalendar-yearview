@@ -6,7 +6,7 @@ const HtmlWebpackPugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    devtool: "sourcemap",
+    //devtool: "sourcemap",
     devServer: {
         port: 9000,
         headers: {
@@ -36,7 +36,7 @@ module.exports = {
     },
     plugins: [
 
-        //new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(),
 
         new MiniCssExtractPlugin({
             filename: "[name].css",

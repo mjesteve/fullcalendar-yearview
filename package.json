@@ -34,7 +34,7 @@
     "buildprod": "webpack --mode production",
     "builddev": "webpack --mode development",
     "builddevwatch": "webpack --mode development --watch",
-    "start": "webpack-dev-server --mode development --open ./dist/index.html",
-    "start2": "webpack-dev-server -d"
+    "start0": "webpack-dev-server --mode development --open ./dist/index.html",
+    "start": "webpack-dev-server -d"
   }
 }

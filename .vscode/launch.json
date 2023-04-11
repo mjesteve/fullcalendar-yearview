@@ -5,23 +5,93 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Edge",
-            "request": "launch",
-            "type": "msedge",
-            "url": "http://localhost:9000/dist/index.html",
-            "webRoot": "${workspaceFolder}"
-        },
-        {
+            "name": "Iniciar Chrome para localhost",
             "type": "chrome",
             "request": "launch",
-            "name": "Iniciar Chrome para localhost",
             "url": "http://localhost:9000/dist/index.html",
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
             "sourceMapPathOverrides": {
                 "webpack:///./*": "${webRoot}/*"
             }
-            //"webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch File Allow File Access - chrome (Debug version)",
+            "type": "chrome",
+            "request": "launch",
+            "sourceMaps": true,
+            "runtimeArgs": ["--allow-file-access-from-files", "--auto-ssl-client-auth"],
+            "url": "file:///${workspaceRoot}/dist/index.html",
+            "webRoot": "${workspaceRoot}\\dist"
+        },
+        {
+            "name": "Launch Edge localhost",
+            "request": "launch",
+            "type": "msedge",
+            "sourceMaps": true,
+            "url": "http://localhost:9000/dist/index.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Edge file",
+            "type": "msedge",
+            "request": "launch",
+            "sourceMaps": true,
+            "url": "file:///C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar\\examples\\year-view.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Launch Microsoft Edge",
+            "type": "msedge",
+            "request": "launch",
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ],
+            "sourceMaps": true,
+            "url": "C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar\\examples\\year-view.html", // Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "msedge",
+            "name": "Launch Microsoft Edge in headless mode",
+            "request": "launch",
+            "runtimeArgs": [
+                "--headless",
+                "--remote-debugging-port=9222"
+            ],
+            "sourceMaps": true,
+            "url": "C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar\\examples\\year-view.html", // Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "vscode-edge-devtools.debug",
+            "name": "Open Edge DevTools",
+            "request": "attach",
+            "sourceMaps": true,
+            "url": "C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar\\examples\\year-view.html", // Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Edge Headless and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge in headless mode",
+                "Open Edge DevTools"
+            ]
+        },
+        {
+            "name": "Launch Edge and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge",
+                "Open Edge DevTools"
+            ]
         }
     ]
 }

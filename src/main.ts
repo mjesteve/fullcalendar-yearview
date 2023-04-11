@@ -1,4 +1,4 @@
-import './main.scss'
+//import './main.scss'
 
 import {createPlugin} from '@fullcalendar/core'
 import DayGridView from "./DayGridView";
