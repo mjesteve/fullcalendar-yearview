@@ -1,3 +1,15 @@
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries */
+/* https://stackoverflow.com/questions/16056591/font-scaling-based-on-size-of-container/74977615#74977615 */
+
+.fc {
+  container-type: size; /* inline-size (only with); */
+}
+
+.fc table {
+  font-size: 0.9cqw;
+}
+
 /* DayGridView
 --------------------------------------------------------------------------------------------------*/
 
@@ -12,7 +24,7 @@
   }
 
   .fc-dayGrid-view .fc-body .fc-row {
-    min-height: 4em; /* ensure that all rows are at least this tall */
+    min-height: 1em; /* ensure that all rows are at least this tall */
   }
 
   /* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
@@ -42,6 +54,7 @@
   .fc-dayGrid-view th.fc-week-number,
   .fc-dayGrid-view th.fc-day-number {
     padding: 0 2px; /* column headers can't have as much v space */
+    /* font-size: 0.75em; */
   }
 
   .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
@@ -78,7 +91,7 @@
   .fc-dayGrid-view td.fc-week-number > * {
     /* work around the way we do column resizing and ensure a minimum width */
     display: inline-block;
-    min-width: 1.25em;
+    min-width: 1.2em;
   }
 
   .fc-row-monthname {
@@ -90,6 +103,7 @@
     border-right-style: solid;
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    font-size: 1cqw; 
 
     span {
       display: block;
@@ -113,4 +127,10 @@
     padding-right: .3em;
     color: #aaa;
   }
+
+  .fc-sat, 
+  .fc-sun {
+    background-color: rgb(245, 241, 188);
+  }
+
 }
