@@ -13,11 +13,40 @@
     <%= htmlWebpackPlugin.tags.headTags %>
     <%= htmlWebpackPlugin.tags.bodyTags %>
     <script>
+        var event1 =  [
+        {   title: "Business Lunch",             start: "2023-09-03T13:00:00",            constraint: "businessHours"        },
+        {   title: "Meeting",                    start: "2023-09-13T11:00:00",            constraint: "availableForMeeting",             color: '#0092c0'        },
+        {   title: "Conference",                 start: "2023-09-18",           end: "2023-09-20"        },
+        {   title: "Party",                      start: "2023-09-29T20:00:00"        },
+        // areas where "Meeting" must be dropped
+        {   groupId: "availableForMeeting",      start: "2023-09-11",           end: "2023-09-11",            display: "background"        },
+        {   groupId: "availableForMeeting",      start: "2023-09-13",           end: "2023-09-13",            display: "background"        },
+        // red areas where no events can be dropped
+        {   start: "2023-09-24",            end: "2023-09-28",            overlap: false,            display: "background",            color: '#c30b4e'        },
+        {   start: "2023-09-06",            end: "2023-09-08",            overlap: false,            display: "background",            color: '#c30b4e'        }
+        ];
 
+        var event2 = [
+        {   title: '001',            start: '2023-01-01',           end: '2023-01-01',            allDay: true,            editable: true,            textColor:'#ccc',
+            backgroundColor: '#3fff !important'
+        },
+        // red areas where no events can be dropped
+        {   title: '001',            start: '2023-08-24',           end: '2023-08-26',            allDay: true,            overlap: true,            rendering: 'background',            color: '#ff9f89'
+        },
+        {   title: '001',            start: '2023-08-06',            end: '2023-08-06',            allDay: true,            overlap: false,            rendering: 'background',            color: '#ff9f89'
+        }
+        ];
+
+        var festivos = [
+            {start: '2023-01-01', end:'2023-01-01', allDay:true, overlap:true, rendering: 'background', color: '#0092c0'},
+            {start: '2023-12-24', end:'2023-12-26', allDay:true, overlap:true, rendering: 'background', color: '#0092c0'},
+        ]
+
+        var calendar;
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
 
-            var calendar = new FullCalendar.Calendar(calendarEl, {
+            calendar = new FullCalendar.Calendar(calendarEl, {
                 defaultView: 'year',
                 plugins: ['interaction', 'dayGrid', 'yearView'],
                 timeZone: 'local',
@@ -36,57 +65,45 @@
                 dateClick: function(info) {
                     document.getElementById('lblstatus').value = info.dateStr;
                 },
-                select: function(info) {
-                    document.getElementById('lblstatus').value = info.startStr + ' to ' + info.endStr;
+			    selectHelper: true,
+                /*eventRender: function(event, element){
+                    element.popover({
+                        animation:true,
+                        delay: 300,
+                        content: '<b>Inicio</b>:'+event.start+"</br><b>Fin</b>:"+event.end,
+                        trigger: 'hover', html: "true"
+                    });
+                },*/
+                selectMirror: true,
+                select: function(arg) {
+                    document.getElementById('lblstatus').value = arg.startStr + ' to ' + arg.endStr;
+                    var title = prompt('Event Title:');
+                    if (title) {
+                    calendar.addEvent({
+                        title: title,
+                        start: arg.start,
+                        end: arg.end,
+                        allDay: arg.allDay
+                    })
+                    }
+                    calendar.unselect()
                 },
                 defaultDate: '2023-01-01',
                 // navLinks: true, can click day/week names to navigate views
                 eventLimit: true, // allow "more" link when too many events
-                events: [
-                    {
-                        title: '001',
-                        start: '2023-01-01', end: '2023-01-01',
-                        allDay: true,
-                        editable: true,
-                        extendedProps: {TipoFestivo: 'laboral', Color:'#ccc'}
-                    },
-                    // red areas where no events can be dropped
-                    {
-                        title: '001',
-                        start: '2023-08-24',
-                        end: '2023-08-24',
-                        allDay: true,
-                        overlap: true,
-                        rendering: 'background',
-                        color: '#ff9f89'
-                    },
-                    {
-                        title: '001',
-                        start: '2023-08-06',
-                        end: '2023-08-06',
-                        allDay: true,
-                        overlap: false,
-                        rendering: 'background',
-                        color: '#ff9f89'
-                    },
-                    {
-                        groupId: 999,
-                        title: 'Repeating Event',
-                        start: '2023-01-07', end: '2023-01-07',
-                        //url: 'http://iest.com',
-                        //classNames: [],
-                        //className: ''
-                    },
-                    {
-                        groupId: 999,
-                        title: 'Repeating Event',
-                        start: '2023-01-09', end: '2023-01-10',
-                    }
-                ]
+                events: festivos
             });
 
             calendar.render();
+
+            calendar.addEvent({title: '001', start: '2023-01-01', end: '2023-01-01', allDay: true});
+            calendar.addEvent({title: '001', start: '2023-01-02', end: '2023-01-02', allDay: true});
         });
+
+        function getEvents(){
+            var arrevents = calendar.getEvents();
+            console.log(arrevents);
+        }
 
     </script>
     <style>
@@ -121,6 +138,7 @@
 <body>
 
     <input id="lblstatus" value="0 de 0"/>
+    <button id="btget" onclick="getEvents()">Get Events</button>
     <div id='calendar'></div>
 
 </body>

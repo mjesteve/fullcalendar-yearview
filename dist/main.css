@@ -90,8 +90,7 @@
     /* 1.25em */ }
   .fc-year-container .fc-row .fc-highlight-skeleton {
     left: 1.2cqw;
-    /* 1.25em */
-    z-index: 3; }
+    /* 1.25em */ }
   .fc-year-container .fc-day-number-weekday {
     padding-right: .3em;
     color: #aaa; }
@@ -101,7 +100,7 @@
   .fc-year-container .fc-event {
     font-size: 1cqw;
     line-height: 2cqw;
-    background-color: transparent !important;
+    /* background-color: transparent !important; */
     border-radius: 0;
     border: 0px;
     color: black;
@@ -116,12 +115,12 @@
     z-index: 9999;
     background-color: transparent !important;
     /* user of this util can scope within a lower z-index */
-    /* top: 50%;
+    top: 50%;
     left: 50%;
     width: 40px;
     height: 40px;
     margin-left: -20px;
-    margin-top: -20px; */ }
+    margin-top: -20px;  }
   .fc-year-container .fc-day-grid-event {
     margin: 1px 2px 0;
     /* spacing between events and edges */
@@ -144,4 +143,10 @@
     /* don't put a border between event cells */
     border-top: 0;
     text-align: center; }
+  .fc-year-container .fc-bgevent-skeleton,
+  .fc-year-container .fc-highlight-skeleton,
+  .fc-year-container .fc-mirror-skeleton {
+    left: 1.2cqw; }
 
+
+/*# sourceMappingURL=main.css.map*/

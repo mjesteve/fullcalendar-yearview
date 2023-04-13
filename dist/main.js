@@ -95,7 +95,224 @@ var FullCalendarYearView =
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__extends\", function() { return __extends; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__assign\", function() { return __assign; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__rest\", function() { return __rest; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__decorate\", function() { return __decorate; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__param\", function() { return __param; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__metadata\", function() { return __metadata; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__awaiter\", function() { return __awaiter; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__generator\", function() { return __generator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__exportStar\", function() { return __exportStar; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__values\", function() { return __values; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__read\", function() { return __read; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__spread\", function() { return __spread; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__spreadArrays\", function() { return __spreadArrays; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__await\", function() { return __await; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__asyncGenerator\", function() { return __asyncGenerator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__asyncDelegator\", function() { return __asyncDelegator; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__asyncValues\", function() { return __asyncValues; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__makeTemplateObject\", function() { return __makeTemplateObject; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__importStar\", function() { return __importStar; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"__importDefault\", function() { return __importDefault; });\n/*! *****************************************************************************\r\nCopyright (c) Microsoft Corporation. All rights reserved.\r\nLicensed under the Apache License, Version 2.0 (the \"License\"); you may not use\r\nthis file except in compliance with the License. You may obtain a copy of the\r\nLicense at http://www.apache.org/licenses/LICENSE-2.0\r\n\r\nTHIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\r\nKIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED\r\nWARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,\r\nMERCHANTABLITY OR NON-INFRINGEMENT.\r\n\r\nSee the Apache Version 2.0 License for specific language governing permissions\r\nand limitations under the License.\r\n***************************************************************************** */\r\n/* global Reflect, Promise */\r\n\r\nvar extendStatics = function(d, b) {\r\n    extendStatics = Object.setPrototypeOf ||\r\n        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\r\n        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\r\n    return extendStatics(d, b);\r\n};\r\n\r\nfunction __extends(d, b) {\r\n    extendStatics(d, b);\r\n    function __() { this.constructor = d; }\r\n    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\r\n}\r\n\r\nvar __assign = function() {\r\n    __assign = Object.assign || function __assign(t) {\r\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\r\n            s = arguments[i];\r\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];\r\n        }\r\n        return t;\r\n    }\r\n    return __assign.apply(this, arguments);\r\n}\r\n\r\nfunction __rest(s, e) {\r\n    var t = {};\r\n    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)\r\n        t[p] = s[p];\r\n    if (s != null && typeof Object.getOwnPropertySymbols === \"function\")\r\n        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {\r\n            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))\r\n                t[p[i]] = s[p[i]];\r\n        }\r\n    return t;\r\n}\r\n\r\nfunction __decorate(decorators, target, key, desc) {\r\n    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;\r\n    if (typeof Reflect === \"object\" && typeof Reflect.decorate === \"function\") r = Reflect.decorate(decorators, target, key, desc);\r\n    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;\r\n    return c > 3 && r && Object.defineProperty(target, key, r), r;\r\n}\r\n\r\nfunction __param(paramIndex, decorator) {\r\n    return function (target, key) { decorator(target, key, paramIndex); }\r\n}\r\n\r\nfunction __metadata(metadataKey, metadataValue) {\r\n    if (typeof Reflect === \"object\" && typeof Reflect.metadata === \"function\") return Reflect.metadata(metadataKey, metadataValue);\r\n}\r\n\r\nfunction __awaiter(thisArg, _arguments, P, generator) {\r\n    return new (P || (P = Promise))(function (resolve, reject) {\r\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\r\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\r\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\r\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\r\n    });\r\n}\r\n\r\nfunction __generator(thisArg, body) {\r\n    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;\r\n    return g = { next: verb(0), \"throw\": verb(1), \"return\": verb(2) }, typeof Symbol === \"function\" && (g[Symbol.iterator] = function() { return this; }), g;\r\n    function verb(n) { return function (v) { return step([n, v]); }; }\r\n    function step(op) {\r\n        if (f) throw new TypeError(\"Generator is already executing.\");\r\n        while (_) try {\r\n            if (f = 1, y && (t = op[0] & 2 ? y[\"return\"] : op[0] ? y[\"throw\"] || ((t = y[\"return\"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;\r\n            if (y = 0, t) op = [op[0] & 2, t.value];\r\n            switch (op[0]) {\r\n                case 0: case 1: t = op; break;\r\n                case 4: _.label++; return { value: op[1], done: false };\r\n                case 5: _.label++; y = op[1]; op = [0]; continue;\r\n                case 7: op = _.ops.pop(); _.trys.pop(); continue;\r\n                default:\r\n                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }\r\n                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }\r\n                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }\r\n                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }\r\n                    if (t[2]) _.ops.pop();\r\n                    _.trys.pop(); continue;\r\n            }\r\n            op = body.call(thisArg, _);\r\n        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }\r\n        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };\r\n    }\r\n}\r\n\r\nfunction __exportStar(m, exports) {\r\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\r\n}\r\n\r\nfunction __values(o) {\r\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator], i = 0;\r\n    if (m) return m.call(o);\r\n    return {\r\n        next: function () {\r\n            if (o && i >= o.length) o = void 0;\r\n            return { value: o && o[i++], done: !o };\r\n        }\r\n    };\r\n}\r\n\r\nfunction __read(o, n) {\r\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\r\n    if (!m) return o;\r\n    var i = m.call(o), r, ar = [], e;\r\n    try {\r\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\r\n    }\r\n    catch (error) { e = { error: error }; }\r\n    finally {\r\n        try {\r\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\r\n        }\r\n        finally { if (e) throw e.error; }\r\n    }\r\n    return ar;\r\n}\r\n\r\nfunction __spread() {\r\n    for (var ar = [], i = 0; i < arguments.length; i++)\r\n        ar = ar.concat(__read(arguments[i]));\r\n    return ar;\r\n}\r\n\r\nfunction __spreadArrays() {\r\n    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;\r\n    for (var r = Array(s), k = 0, i = 0; i < il; i++)\r\n        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)\r\n            r[k] = a[j];\r\n    return r;\r\n};\r\n\r\nfunction __await(v) {\r\n    return this instanceof __await ? (this.v = v, this) : new __await(v);\r\n}\r\n\r\nfunction __asyncGenerator(thisArg, _arguments, generator) {\r\n    if (!Symbol.asyncIterator) throw new TypeError(\"Symbol.asyncIterator is not defined.\");\r\n    var g = generator.apply(thisArg, _arguments || []), i, q = [];\r\n    return i = {}, verb(\"next\"), verb(\"throw\"), verb(\"return\"), i[Symbol.asyncIterator] = function () { return this; }, i;\r\n    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }\r\n    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }\r\n    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }\r\n    function fulfill(value) { resume(\"next\", value); }\r\n    function reject(value) { resume(\"throw\", value); }\r\n    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }\r\n}\r\n\r\nfunction __asyncDelegator(o) {\r\n    var i, p;\r\n    return i = {}, verb(\"next\"), verb(\"throw\", function (e) { throw e; }), verb(\"return\"), i[Symbol.iterator] = function () { return this; }, i;\r\n    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === \"return\" } : f ? f(v) : v; } : f; }\r\n}\r\n\r\nfunction __asyncValues(o) {\r\n    if (!Symbol.asyncIterator) throw new TypeError(\"Symbol.asyncIterator is not defined.\");\r\n    var m = o[Symbol.asyncIterator], i;\r\n    return m ? m.call(o) : (o = typeof __values === \"function\" ? __values(o) : o[Symbol.iterator](), i = {}, verb(\"next\"), verb(\"throw\"), verb(\"return\"), i[Symbol.asyncIterator] = function () { return this; }, i);\r\n    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }\r\n    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }\r\n}\r\n\r\nfunction __makeTemplateObject(cooked, raw) {\r\n    if (Object.defineProperty) { Object.defineProperty(cooked, \"raw\", { value: raw }); } else { cooked.raw = raw; }\r\n    return cooked;\r\n};\r\n\r\nfunction __importStar(mod) {\r\n    if (mod && mod.__esModule) return mod;\r\n    var result = {};\r\n    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];\r\n    result.default = mod;\r\n    return result;\r\n}\r\n\r\nfunction __importDefault(mod) {\r\n    return (mod && mod.__esModule) ? mod : { default: mod };\r\n}\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\node_modules\\tslib\\tslib.es6.js");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spreadArrays", function() { return __spreadArrays; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function() { return __asyncGenerator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function() { return __asyncDelegator; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__asyncValues", function() { return __asyncValues; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = function(d, b) {
+    extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return extendStatics(d, b);
+};
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    }
+    return __assign.apply(this, arguments);
+}
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+
+function __param(paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+}
+
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+
+function __awaiter(thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+
+function __generator(thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+}
+
+function __exportStar(m, exports) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
+function __values(o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+}
+
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+}
+
+function __spread() {
+    for (var ar = [], i = 0; i < arguments.length; i++)
+        ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+
+function __spreadArrays() {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+    function verb(n) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function fulfill(value) { resume("next", value); }
+    function reject(value) { resume("throw", value); }
+    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+}
+
+function __asyncDelegator(o) {
+    var i, p;
+    return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+}
+
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+    function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+}
+
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
+
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result.default = mod;
+    return result;
+}
+
+function __importDefault(mod) {
+    return (mod && mod.__esModule) ? mod : { default: mod };
+}
+
 
 /***/ }),
 
@@ -107,7 +324,244 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _DayGridDateProfileGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DayGridDateProfileGenerator */ \"./src/DayGridDateProfileGenerator.ts\");\n/* harmony import */ var _DayGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DayGrid */ \"./src/DayGrid.ts\");\n\r\n\r\n\r\n\r\nvar WEEK_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createFormatter\"])({ week: 'numeric' });\r\n/* An abstract class for the daygrid views, as well as month view. Renders one or more rows of day cells.\r\n----------------------------------------------------------------------------------------------------------------------*/\r\n// It is a manager for a DayGrid subcomponent, which does most of the heavy lifting.\r\n// It is responsible for managing width/height.\r\nvar DayGridView = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGridView, _super);\r\n    function DayGridView(context, viewSpec, dateProfileGenerator, parentEl) {\r\n        var _this = _super.call(this, context, viewSpec, dateProfileGenerator, parentEl) || this;\r\n        /* Header Rendering\r\n        ------------------------------------------------------------------------------------------------------------------*/\r\n        // Generates the HTML that will go before the day-of week header cells\r\n        _this.renderHeadIntroHtml = function () {\r\n            var theme = _this.theme;\r\n            if (_this.colWeekNumbersVisible) {\r\n                return '' +\r\n                    '<th class=\"fc-week-number ' + theme.getClass('widgetHeader') + '\" ' + _this.weekNumberStyleAttr() + '>' +\r\n                    '<span>' + // needed for matchCellWidths\r\n                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"htmlEscape\"])(_this.opt('weekLabel')) +\r\n                    '</span>' +\r\n                    '</th>';\r\n            }\r\n            return '';\r\n        };\r\n        /* Day Grid Rendering\r\n        ------------------------------------------------------------------------------------------------------------------*/\r\n        // Generates the HTML that will go before content-skeleton cells that display the day/week numbers\r\n        _this.renderDayGridNumberIntroHtml = function (row, dayGrid) {\r\n            var dateEnv = _this.dateEnv;\r\n            var weekStart = dayGrid.props.cells[row][0].date;\r\n            if (_this.colWeekNumbersVisible) {\r\n                return '' +\r\n                    '<td class=\"fc-week-number\" ' + _this.weekNumberStyleAttr() + '>' +\r\n                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"buildGotoAnchorHtml\"])(// aside from link, important for matchCellWidths\r\n                    _this, { date: weekStart, type: 'week', forceOff: dayGrid.colCnt === 1 }, dateEnv.format(weekStart, WEEK_NUM_FORMAT) // inner HTML\r\n                    ) +\r\n                    '</td>';\r\n            }\r\n            return '';\r\n        };\r\n        // Generates the HTML that goes before the day bg cells for each day-row\r\n        _this.renderDayGridBgIntroHtml = function () {\r\n            var theme = _this.theme;\r\n            if (_this.colWeekNumbersVisible) {\r\n                return '<td class=\"fc-week-number ' + theme.getClass('widgetContent') + '\" ' + _this.weekNumberStyleAttr() + '></td>';\r\n            }\r\n            return '';\r\n        };\r\n        // Generates the HTML that goes before every other type of row generated by DayGrid.\r\n        // Affects mirror-skeleton and highlight-skeleton rows.\r\n        _this.renderDayGridIntroHtml = function () {\r\n            if (_this.colWeekNumbersVisible) {\r\n                return '<td class=\"fc-week-number\" ' + _this.weekNumberStyleAttr() + '></td>';\r\n            }\r\n            return '';\r\n        };\r\n        _this.el.classList.add('fc-dayGrid-view');\r\n        _this.el.innerHTML = _this.renderSkeletonHtml();\r\n        _this.scroller = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"ScrollComponent\"]('hidden', // overflow x\r\n        'auto' // overflow y\r\n        );\r\n        var dayGridContainerEl = _this.scroller.el;\r\n        _this.el.querySelector('.fc-body > tr > td').appendChild(dayGridContainerEl);\r\n        dayGridContainerEl.classList.add('fc-day-grid-container');\r\n        dayGridContainerEl.classList.add('fc-year-container');\r\n        var dayGridEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"])('div', { className: 'fc-day-grid' });\r\n        dayGridContainerEl.appendChild(dayGridEl);\r\n        var cellWeekNumbersVisible;\r\n        if (_this.opt('weekNumbers')) {\r\n            if (_this.opt('weekNumbersWithinDays')) {\r\n                cellWeekNumbersVisible = true;\r\n                _this.colWeekNumbersVisible = false;\r\n            }\r\n            else {\r\n                cellWeekNumbersVisible = false;\r\n                _this.colWeekNumbersVisible = true;\r\n            }\r\n        }\r\n        else {\r\n            _this.colWeekNumbersVisible = false;\r\n            cellWeekNumbersVisible = false;\r\n        }\r\n        _this.dayGrid = new _DayGrid__WEBPACK_IMPORTED_MODULE_3__[\"default\"](_this.context, dayGridEl, {\r\n            renderNumberIntroHtml: _this.renderDayGridNumberIntroHtml,\r\n            renderBgIntroHtml: _this.renderDayGridBgIntroHtml,\r\n            renderIntroHtml: _this.renderDayGridIntroHtml,\r\n            colWeekNumbersVisible: _this.colWeekNumbersVisible,\r\n            cellWeekNumbersVisible: cellWeekNumbersVisible\r\n        });\r\n        return _this;\r\n    }\r\n    DayGridView.prototype.destroy = function () {\r\n        _super.prototype.destroy.call(this);\r\n        this.dayGrid.destroy();\r\n        this.scroller.destroy();\r\n    };\r\n    // Builds the HTML skeleton for the view.\r\n    // The day-grid component will render inside of a container defined by this HTML.\r\n    DayGridView.prototype.renderSkeletonHtml = function () {\r\n        var theme = this.theme;\r\n        return '' +\r\n            '<table class=\"' + theme.getClass('tableGrid') + '\">' +\r\n            (this.opt('columnHeader') ?\r\n                '<thead class=\"fc-head\">' +\r\n                    '<tr>' +\r\n                    '<td class=\"fc-head-container ' + theme.getClass('widgetHeader') + '\">&nbsp;</td>' +\r\n                    '</tr>' +\r\n                    '</thead>' :\r\n                '') +\r\n            '<tbody class=\"fc-body\">' +\r\n            '<tr>' +\r\n            '<td class=\"' + theme.getClass('widgetContent') + '\"></td>' +\r\n            '</tr>' +\r\n            '</tbody>' +\r\n            '</table>';\r\n    };\r\n    // Generates an HTML attribute string for setting the width of the week number column, if it is known\r\n    DayGridView.prototype.weekNumberStyleAttr = function () {\r\n        if (this.weekNumberWidth != null) {\r\n            return 'style=\"width:' + this.weekNumberWidth + 'px\"';\r\n        }\r\n        return '';\r\n    };\r\n    // Determines whether each row should have a constant height\r\n    DayGridView.prototype.hasRigidRows = function () {\r\n        var eventLimit = this.opt('eventLimit');\r\n        return eventLimit && typeof eventLimit !== 'number';\r\n    };\r\n    /* Dimensions\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGridView.prototype.updateSize = function (isResize, viewHeight, isAuto) {\r\n        _super.prototype.updateSize.call(this, isResize, viewHeight, isAuto); // will call updateBaseSize. important that executes first\r\n        this.dayGrid.updateSize(isResize);\r\n    };\r\n    // Refreshes the horizontal dimensions of the view\r\n    DayGridView.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {\r\n        var dayGrid = this.dayGrid;\r\n        var eventLimit = this.opt('eventLimit');\r\n        var headRowEl = this.header ? this.header.el : null; // HACK\r\n        var scrollerHeight;\r\n        var scrollbarWidths;\r\n        // hack to give the view some height prior to dayGrid's columns being rendered\r\n        // TODO: separate setting height from scroller VS dayGrid.\r\n        if (!dayGrid.rowEls) {\r\n            if (!isAuto) {\r\n                scrollerHeight = this.computeScrollerHeight(viewHeight);\r\n                this.scroller.setHeight(scrollerHeight);\r\n            }\r\n            return;\r\n        }\r\n        if (this.colWeekNumbersVisible) {\r\n            // Make sure all week number cells running down the side have the same width.\r\n            this.weekNumberWidth = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"matchCellWidths\"])(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"findElements\"])(this.el, '.fc-week-number'));\r\n        }\r\n        // reset all heights to be natural\r\n        this.scroller.clear();\r\n        if (headRowEl) {\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"uncompensateScroll\"])(headRowEl);\r\n        }\r\n        dayGrid.removeSegPopover(); // kill the \"more\" popover if displayed\r\n        // is the event limit a constant level number?\r\n        if (eventLimit && typeof eventLimit === 'number') {\r\n            dayGrid.limitRows(eventLimit); // limit the levels first so the height can redistribute after\r\n        }\r\n        // distribute the height to the rows\r\n        // (viewHeight is a \"recommended\" value if isAuto)\r\n        scrollerHeight = this.computeScrollerHeight(viewHeight);\r\n        this.setGridHeight(scrollerHeight, isAuto);\r\n        // is the event limit dynamically calculated?\r\n        if (eventLimit && typeof eventLimit !== 'number') {\r\n            dayGrid.limitRows(eventLimit); // limit the levels after the grid's row heights have been set\r\n        }\r\n        if (!isAuto) { // should we force dimensions of the scroll container?\r\n            this.scroller.setHeight(scrollerHeight);\r\n            scrollbarWidths = this.scroller.getScrollbarWidths();\r\n            if (scrollbarWidths.left || scrollbarWidths.right) { // using scrollbars?\r\n                if (headRowEl) {\r\n                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"compensateScroll\"])(headRowEl, scrollbarWidths);\r\n                }\r\n                // doing the scrollbar compensation might have created text overflow which created more height. redo\r\n                scrollerHeight = this.computeScrollerHeight(viewHeight);\r\n                this.scroller.setHeight(scrollerHeight);\r\n            }\r\n            // guarantees the same scrollbar widths\r\n            this.scroller.lockOverflow(scrollbarWidths);\r\n        }\r\n    };\r\n    // given a desired total height of the view, returns what the height of the scroller should be\r\n    DayGridView.prototype.computeScrollerHeight = function (viewHeight) {\r\n        return viewHeight -\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"subtractInnerElHeight\"])(this.el, this.scroller.el); // everything that's NOT the scroller\r\n    };\r\n    // Sets the height of just the DayGrid component in this view\r\n    DayGridView.prototype.setGridHeight = function (height, isAuto) {\r\n        if (this.opt('monthMode')) {\r\n            // if auto, make the height of each row the height that it would be if there were 6 weeks\r\n            if (isAuto) {\r\n                height *= this.dayGrid.rowCnt / 6;\r\n            }\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"distributeHeight\"])(this.dayGrid.rowEls, height, !isAuto); // if auto, don't compensate for height-hogging rows\r\n        }\r\n        else {\r\n            if (isAuto) {\r\n                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"undistributeHeight\"])(this.dayGrid.rowEls); // let the rows be their natural height with no expanding\r\n            }\r\n            else {\r\n                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"distributeHeight\"])(this.dayGrid.rowEls, height, true); // true = compensate for height-hogging rows\r\n            }\r\n        }\r\n    };\r\n    /* Scroll\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGridView.prototype.computeDateScroll = function (duration) {\r\n        return { top: 0 };\r\n    };\r\n    DayGridView.prototype.queryDateScroll = function () {\r\n        return { top: this.scroller.getScrollTop() };\r\n    };\r\n    DayGridView.prototype.applyDateScroll = function (scroll) {\r\n        if (scroll.top !== undefined) {\r\n            this.scroller.setScrollTop(scroll.top);\r\n        }\r\n    };\r\n    return DayGridView;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"View\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayGridView);\r\nDayGridView.prototype.dateProfileGeneratorClass = _DayGridDateProfileGenerator__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\AbstractDayGridView.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _DayGridDateProfileGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DayGridDateProfileGenerator */ "./src/DayGridDateProfileGenerator.ts");
+/* harmony import */ var _DayGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DayGrid */ "./src/DayGrid.ts");
+
+
+
+
+var WEEK_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createFormatter"])({ week: 'numeric' });
+/* An abstract class for the daygrid views, as well as month view. Renders one or more rows of day cells.
+----------------------------------------------------------------------------------------------------------------------*/
+// It is a manager for a DayGrid subcomponent, which does most of the heavy lifting.
+// It is responsible for managing width/height.
+var DayGridView = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGridView, _super);
+    function DayGridView(context, viewSpec, dateProfileGenerator, parentEl) {
+        var _this = _super.call(this, context, viewSpec, dateProfileGenerator, parentEl) || this;
+        /* Header Rendering
+        ------------------------------------------------------------------------------------------------------------------*/
+        // Generates the HTML that will go before the day-of week header cells
+        _this.renderHeadIntroHtml = function () {
+            var theme = _this.theme;
+            if (_this.colWeekNumbersVisible) {
+                return '' +
+                    '<th class="fc-week-number ' + theme.getClass('widgetHeader') + '" ' + _this.weekNumberStyleAttr() + '>' +
+                    '<span>' + // needed for matchCellWidths
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["htmlEscape"])(_this.opt('weekLabel')) +
+                    '</span>' +
+                    '</th>';
+            }
+            return '';
+        };
+        /* Day Grid Rendering
+        ------------------------------------------------------------------------------------------------------------------*/
+        // Generates the HTML that will go before content-skeleton cells that display the day/week numbers
+        _this.renderDayGridNumberIntroHtml = function (row, dayGrid) {
+            var dateEnv = _this.dateEnv;
+            var weekStart = dayGrid.props.cells[row][0].date;
+            if (_this.colWeekNumbersVisible) {
+                return '' +
+                    '<td class="fc-week-number" ' + _this.weekNumberStyleAttr() + '>' +
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildGotoAnchorHtml"])(// aside from link, important for matchCellWidths
+                    _this, { date: weekStart, type: 'week', forceOff: dayGrid.colCnt === 1 }, dateEnv.format(weekStart, WEEK_NUM_FORMAT) // inner HTML
+                    ) +
+                    '</td>';
+            }
+            return '';
+        };
+        // Generates the HTML that goes before the day bg cells for each day-row
+        _this.renderDayGridBgIntroHtml = function () {
+            var theme = _this.theme;
+            if (_this.colWeekNumbersVisible) {
+                return '<td class="fc-week-number ' + theme.getClass('widgetContent') + '" ' + _this.weekNumberStyleAttr() + '></td>';
+            }
+            return '';
+        };
+        // Generates the HTML that goes before every other type of row generated by DayGrid.
+        // Affects mirror-skeleton and highlight-skeleton rows.
+        _this.renderDayGridIntroHtml = function () {
+            if (_this.colWeekNumbersVisible) {
+                return '<td class="fc-week-number" ' + _this.weekNumberStyleAttr() + '></td>';
+            }
+            return '';
+        };
+        _this.el.classList.add('fc-dayGrid-view');
+        _this.el.innerHTML = _this.renderSkeletonHtml();
+        _this.scroller = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["ScrollComponent"]('hidden', // overflow x
+        'auto' // overflow y
+        );
+        var dayGridContainerEl = _this.scroller.el;
+        _this.el.querySelector('.fc-body > tr > td').appendChild(dayGridContainerEl);
+        dayGridContainerEl.classList.add('fc-day-grid-container');
+        dayGridContainerEl.classList.add('fc-year-container');
+        var dayGridEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"])('div', { className: 'fc-day-grid' });
+        dayGridContainerEl.appendChild(dayGridEl);
+        var cellWeekNumbersVisible;
+        if (_this.opt('weekNumbers')) {
+            if (_this.opt('weekNumbersWithinDays')) {
+                cellWeekNumbersVisible = true;
+                _this.colWeekNumbersVisible = false;
+            }
+            else {
+                cellWeekNumbersVisible = false;
+                _this.colWeekNumbersVisible = true;
+            }
+        }
+        else {
+            _this.colWeekNumbersVisible = false;
+            cellWeekNumbersVisible = false;
+        }
+        _this.dayGrid = new _DayGrid__WEBPACK_IMPORTED_MODULE_3__["default"](_this.context, dayGridEl, {
+            renderNumberIntroHtml: _this.renderDayGridNumberIntroHtml,
+            renderBgIntroHtml: _this.renderDayGridBgIntroHtml,
+            renderIntroHtml: _this.renderDayGridIntroHtml,
+            colWeekNumbersVisible: _this.colWeekNumbersVisible,
+            cellWeekNumbersVisible: cellWeekNumbersVisible
+        });
+        return _this;
+    }
+    DayGridView.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.dayGrid.destroy();
+        this.scroller.destroy();
+    };
+    // Builds the HTML skeleton for the view.
+    // The day-grid component will render inside of a container defined by this HTML.
+    DayGridView.prototype.renderSkeletonHtml = function () {
+        var theme = this.theme;
+        return '' +
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+            (this.opt('columnHeader') ?
+                '<thead class="fc-head">' +
+                    '<tr>' +
+                    '<td class="fc-head-container ' + theme.getClass('widgetHeader') + '">&nbsp;</td>' +
+                    '</tr>' +
+                    '</thead>' :
+                '') +
+            '<tbody class="fc-body">' +
+            '<tr>' +
+            '<td class="' + theme.getClass('widgetContent') + '"></td>' +
+            '</tr>' +
+            '</tbody>' +
+            '</table>';
+    };
+    // Generates an HTML attribute string for setting the width of the week number column, if it is known
+    DayGridView.prototype.weekNumberStyleAttr = function () {
+        if (this.weekNumberWidth != null) {
+            return 'style="width:' + this.weekNumberWidth + 'px"';
+        }
+        return '';
+    };
+    // Determines whether each row should have a constant height
+    DayGridView.prototype.hasRigidRows = function () {
+        var eventLimit = this.opt('eventLimit');
+        return eventLimit && typeof eventLimit !== 'number';
+    };
+    /* Dimensions
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGridView.prototype.updateSize = function (isResize, viewHeight, isAuto) {
+        _super.prototype.updateSize.call(this, isResize, viewHeight, isAuto); // will call updateBaseSize. important that executes first
+        this.dayGrid.updateSize(isResize);
+    };
+    // Refreshes the horizontal dimensions of the view
+    DayGridView.prototype.updateBaseSize = function (isResize, viewHeight, isAuto) {
+        var dayGrid = this.dayGrid;
+        var eventLimit = this.opt('eventLimit');
+        var headRowEl = this.header ? this.header.el : null; // HACK
+        var scrollerHeight;
+        var scrollbarWidths;
+        // hack to give the view some height prior to dayGrid's columns being rendered
+        // TODO: separate setting height from scroller VS dayGrid.
+        if (!dayGrid.rowEls) {
+            if (!isAuto) {
+                scrollerHeight = this.computeScrollerHeight(viewHeight);
+                this.scroller.setHeight(scrollerHeight);
+            }
+            return;
+        }
+        if (this.colWeekNumbersVisible) {
+            // Make sure all week number cells running down the side have the same width.
+            this.weekNumberWidth = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["matchCellWidths"])(Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["findElements"])(this.el, '.fc-week-number'));
+        }
+        // reset all heights to be natural
+        this.scroller.clear();
+        if (headRowEl) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["uncompensateScroll"])(headRowEl);
+        }
+        dayGrid.removeSegPopover(); // kill the "more" popover if displayed
+        // is the event limit a constant level number?
+        if (eventLimit && typeof eventLimit === 'number') {
+            dayGrid.limitRows(eventLimit); // limit the levels first so the height can redistribute after
+        }
+        // distribute the height to the rows
+        // (viewHeight is a "recommended" value if isAuto)
+        scrollerHeight = this.computeScrollerHeight(viewHeight);
+        this.setGridHeight(scrollerHeight, isAuto);
+        // is the event limit dynamically calculated?
+        if (eventLimit && typeof eventLimit !== 'number') {
+            dayGrid.limitRows(eventLimit); // limit the levels after the grid's row heights have been set
+        }
+        if (!isAuto) { // should we force dimensions of the scroll container?
+            this.scroller.setHeight(scrollerHeight);
+            scrollbarWidths = this.scroller.getScrollbarWidths();
+            if (scrollbarWidths.left || scrollbarWidths.right) { // using scrollbars?
+                if (headRowEl) {
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["compensateScroll"])(headRowEl, scrollbarWidths);
+                }
+                // doing the scrollbar compensation might have created text overflow which created more height. redo
+                scrollerHeight = this.computeScrollerHeight(viewHeight);
+                this.scroller.setHeight(scrollerHeight);
+            }
+            // guarantees the same scrollbar widths
+            this.scroller.lockOverflow(scrollbarWidths);
+        }
+    };
+    // given a desired total height of the view, returns what the height of the scroller should be
+    DayGridView.prototype.computeScrollerHeight = function (viewHeight) {
+        return viewHeight -
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["subtractInnerElHeight"])(this.el, this.scroller.el); // everything that's NOT the scroller
+    };
+    // Sets the height of just the DayGrid component in this view
+    DayGridView.prototype.setGridHeight = function (height, isAuto) {
+        if (this.opt('monthMode')) {
+            // if auto, make the height of each row the height that it would be if there were 6 weeks
+            if (isAuto) {
+                height *= this.dayGrid.rowCnt / 6;
+            }
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["distributeHeight"])(this.dayGrid.rowEls, height, !isAuto); // if auto, don't compensate for height-hogging rows
+        }
+        else {
+            if (isAuto) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["undistributeHeight"])(this.dayGrid.rowEls); // let the rows be their natural height with no expanding
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["distributeHeight"])(this.dayGrid.rowEls, height, true); // true = compensate for height-hogging rows
+            }
+        }
+    };
+    /* Scroll
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGridView.prototype.computeDateScroll = function (duration) {
+        return { top: 0 };
+    };
+    DayGridView.prototype.queryDateScroll = function () {
+        return { top: this.scroller.getScrollTop() };
+    };
+    DayGridView.prototype.applyDateScroll = function (scroll) {
+        if (scroll.top !== undefined) {
+            this.scroller.setScrollTop(scroll.top);
+        }
+    };
+    return DayGridView;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["View"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayGridView);
+DayGridView.prototype.dateProfileGeneratorClass = _DayGridDateProfileGenerator__WEBPACK_IMPORTED_MODULE_2__["default"];
+
 
 /***/ }),
 
@@ -119,7 +573,49 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tsli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__);\n\r\nvar DayBgRow = /** @class */ (function () {\r\n    function DayBgRow(context) {\r\n        this.context = context;\r\n    }\r\n    DayBgRow.prototype.renderHtml = function (props) {\r\n        var parts = [];\r\n        if (props.renderIntroHtml) {\r\n            parts.push(props.renderIntroHtml());\r\n        }\r\n        for (var _i = 0, _a = props.cells; _i < _a.length; _i++) {\r\n            var cell = _a[_i];\r\n            parts.push(renderCellHtml(cell.date, props.dateProfile, this.context, cell.htmlAttrs));\r\n        }\r\n        if (!props.cells.length) {\r\n            parts.push('<td class=\"fc-day ' + this.context.theme.getClass('widgetContent') + '\"></td>');\r\n        }\r\n        if (this.context.options.dir === 'rtl') {\r\n            parts.reverse();\r\n        }\r\n        return '<tr>' + parts.join('') + '</tr>';\r\n    };\r\n    return DayBgRow;\r\n}());\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayBgRow);\r\nfunction renderCellHtml(date, dateProfile, context, otherAttrs) {\r\n    var dateEnv = context.dateEnv, theme = context.theme;\r\n    var isDateValid = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"rangeContainsMarker\"])(dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.\r\n    var classes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"getDayClasses\"])(date, dateProfile, context);\r\n    classes.unshift('fc-day', theme.getClass('widgetContent'));\r\n    return '<td class=\"' + classes.join(' ') + '\"' +\r\n        (isDateValid ?\r\n            ' data-date=\"' + dateEnv.formatIso(date, { omitTime: true }) + '\"' :\r\n            '') +\r\n        (otherAttrs ?\r\n            ' ' + otherAttrs :\r\n            '') +\r\n        '></td>';\r\n}\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayBgRow.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__);
+
+var DayBgRow = /** @class */ (function () {
+    function DayBgRow(context) {
+        this.context = context;
+    }
+    DayBgRow.prototype.renderHtml = function (props) {
+        var parts = [];
+        if (props.renderIntroHtml) {
+            parts.push(props.renderIntroHtml());
+        }
+        for (var _i = 0, _a = props.cells; _i < _a.length; _i++) {
+            var cell = _a[_i];
+            parts.push(renderCellHtml(cell.date, props.dateProfile, this.context, cell.htmlAttrs));
+        }
+        if (!props.cells.length) {
+            parts.push('<td class="fc-day ' + this.context.theme.getClass('widgetContent') + '"></td>');
+        }
+        if (this.context.options.dir === 'rtl') {
+            parts.reverse();
+        }
+        return '<tr>' + parts.join('') + '</tr>';
+    };
+    return DayBgRow;
+}());
+/* harmony default export */ __webpack_exports__["default"] = (DayBgRow);
+function renderCellHtml(date, dateProfile, context, otherAttrs) {
+    var dateEnv = context.dateEnv, theme = context.theme;
+    var isDateValid = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["rangeContainsMarker"])(dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.
+    var classes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["getDayClasses"])(date, dateProfile, context);
+    classes.unshift('fc-day', theme.getClass('widgetContent'));
+    return '<td class="' + classes.join(' ') + '"' +
+        (isDateValid ?
+            ' data-date="' + dateEnv.formatIso(date, { omitTime: true }) + '"' :
+            '') +
+        (otherAttrs ?
+            ' ' + otherAttrs :
+            '') +
+        '></td>';
+}
+
 
 /***/ }),
 
@@ -131,7 +627,601 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ful
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Popover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Popover */ \"./src/Popover.ts\");\n/* harmony import */ var _DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DayGridEventRenderer */ \"./src/DayGridEventRenderer.ts\");\n/* harmony import */ var _DayGridMirrorRenderer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DayGridMirrorRenderer */ \"./src/DayGridMirrorRenderer.ts\");\n/* harmony import */ var _DayGridFillRenderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DayGridFillRenderer */ \"./src/DayGridFillRenderer.ts\");\n/* harmony import */ var _DayTile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DayTile */ \"./src/DayTile.ts\");\n/* harmony import */ var _DayBgRow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DayBgRow */ \"./src/DayBgRow.ts\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! moment */ \"moment\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_8__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nvar DAY_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createFormatter\"])({ day: 'numeric' });\r\nvar WEEK_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createFormatter\"])({ week: 'numeric' });\r\nvar DayGrid = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGrid, _super);\r\n    function DayGrid(context, el, renderProps) {\r\n        var _this = _super.call(this, context, el) || this;\r\n        _this.bottomCoordPadding = 0; // hack for extending the hit area for the last row of the coordinate grid\r\n        _this.isCellSizesDirty = false;\r\n        var eventRenderer = _this.eventRenderer = new _DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_3__[\"default\"](_this);\r\n        var fillRenderer = _this.fillRenderer = new _DayGridFillRenderer__WEBPACK_IMPORTED_MODULE_5__[\"default\"](_this);\r\n        _this.mirrorRenderer = new _DayGridMirrorRenderer__WEBPACK_IMPORTED_MODULE_4__[\"default\"](_this);\r\n        var renderCells = _this.renderCells = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(_this._renderCells, _this._unrenderCells);\r\n        _this.renderBusinessHours = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(fillRenderer.renderSegs.bind(fillRenderer, 'businessHours'), fillRenderer.unrender.bind(fillRenderer, 'businessHours'), [renderCells]);\r\n        _this.renderDateSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(fillRenderer.renderSegs.bind(fillRenderer, 'highlight'), fillRenderer.unrender.bind(fillRenderer, 'highlight'), [renderCells]);\r\n        _this.renderBgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(fillRenderer.renderSegs.bind(fillRenderer, 'bgEvent'), fillRenderer.unrender.bind(fillRenderer, 'bgEvent'), [renderCells]);\r\n        _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderCells]);\r\n        _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);\r\n        _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(_this._renderEventDrag, _this._unrenderEventDrag, [renderCells]);\r\n        _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(_this._renderEventResize, _this._unrenderEventResize, [renderCells]);\r\n        _this.renderProps = renderProps;\r\n        return _this;\r\n    }\r\n    DayGrid.prototype.render = function (props) {\r\n        var cells = props.cells;\r\n        this.rowCnt = cells.length;\r\n        this.colCnt = cells[0].length;\r\n        this.renderCells(cells, props.isRigid);\r\n        this.renderBusinessHours(props.businessHourSegs);\r\n        this.renderDateSelection(props.dateSelectionSegs);\r\n        this.renderBgEvents(props.bgEventSegs);\r\n        this.renderFgEvents(props.fgEventSegs);\r\n        this.renderEventSelection(props.eventSelection);\r\n        this.renderEventDrag(props.eventDrag);\r\n        this.renderEventResize(props.eventResize);\r\n        if (this.segPopoverTile) {\r\n            this.updateSegPopoverTile();\r\n        }\r\n    };\r\n    DayGrid.prototype.destroy = function () {\r\n        _super.prototype.destroy.call(this);\r\n        this.renderCells.unrender(); // will unrender everything else\r\n    };\r\n    DayGrid.prototype.getCellRange = function (row, col) {\r\n        var start = this.props.cells[row][col].date;\r\n        var end = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"addDays\"])(start, 1);\r\n        return { start: start, end: end };\r\n    };\r\n    DayGrid.prototype.updateSegPopoverTile = function (date, segs) {\r\n        var ownProps = this.props;\r\n        this.segPopoverTile.receiveProps({\r\n            date: date || this.segPopoverTile.props.date,\r\n            fgSegs: segs || this.segPopoverTile.props.fgSegs,\r\n            eventSelection: ownProps.eventSelection,\r\n            eventDragInstances: ownProps.eventDrag ? ownProps.eventDrag.affectedInstances : null,\r\n            eventResizeInstances: ownProps.eventResize ? ownProps.eventResize.affectedInstances : null\r\n        });\r\n    };\r\n    /* Date Rendering\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGrid.prototype._renderCells = function (cells, isRigid) {\r\n        var _a = this, view = _a.view, dateEnv = _a.dateEnv;\r\n        var _b = this, rowCnt = _b.rowCnt, colCnt = _b.colCnt;\r\n        var html = '';\r\n        var row;\r\n        var col;\r\n        for (row = 0; row < rowCnt; row++) {\r\n            html += this.renderDayRowHtml(row, isRigid);\r\n        }\r\n        this.el.innerHTML = html;\r\n        this.rowEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"findElements\"])(this.el, '.fc-row');\r\n        this.cellEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"findElements\"])(this.el, '.fc-day, .fc-disabled-day');\r\n        if (this.isRtl) {\r\n            this.cellEls.reverse();\r\n        }\r\n        this.rowPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"PositionCache\"](this.el, this.rowEls, false, true // vertical\r\n        );\r\n        this.colPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"PositionCache\"](this.el, this.cellEls.slice(0, colCnt), // only the first row\r\n        true, false // horizontal\r\n        );\r\n        // trigger dayRender with each cell's element\r\n        for (row = 0; row < rowCnt; row++) {\r\n            for (col = 0; col < colCnt; col++) {\r\n                if (cells[row][col] === undefined) {\r\n                    break;\r\n                }\r\n                if (cells[row][col].date != null) {\r\n                    this.publiclyTrigger('dayRender', [\r\n                        {\r\n                            date: dateEnv.toDate(cells[row][col].date),\r\n                            el: this.getCellEl(row, col),\r\n                            view: view\r\n                        }\r\n                    ]);\r\n                }\r\n            }\r\n        }\r\n        this.isCellSizesDirty = true;\r\n    };\r\n    DayGrid.prototype._unrenderCells = function () {\r\n        this.removeSegPopover();\r\n    };\r\n    // Generates the HTML for a single row, which is a div that wraps a table.\r\n    // `row` is the row number.\r\n    DayGrid.prototype.renderDayRowHtml = function (row, isRigid) {\r\n        var theme = this.theme;\r\n        var classes = ['fc-row', 'fc-week', theme.getClass('dayRow')];\r\n        if (isRigid) {\r\n            classes.push('fc-rigid');\r\n        }\r\n        var bgRow = new _DayBgRow__WEBPACK_IMPORTED_MODULE_7__[\"default\"](this.context);\r\n        return '' +\r\n            '<div class=\"' + classes.join(' ') + '\">' +\r\n            '<div class=\"fc-row-monthname fc-content\"><span>' + moment__WEBPACK_IMPORTED_MODULE_8___default()(this.props.cells[row][0].date).format('MMM') + '</span></div>' +\r\n            '<div class=\"fc-bg\">' +\r\n            '<table class=\"' + theme.getClass('tableGrid') + '\">' +\r\n            bgRow.renderHtml({\r\n                cells: this.props.cells[row],\r\n                dateProfile: this.props.dateProfile,\r\n                renderIntroHtml: this.renderProps.renderBgIntroHtml\r\n            }) +\r\n            '</table>' +\r\n            '</div>' +\r\n            '<div class=\"fc-content-skeleton\">' +\r\n            '<table>' +\r\n            (this.getIsNumbersVisible() ?\r\n                '<thead>' +\r\n                    this.renderNumberTrHtml(row) +\r\n                    '</thead>' :\r\n                '') +\r\n            '</table>' +\r\n            '</div>' +\r\n            '</div>';\r\n    };\r\n    DayGrid.prototype.getIsNumbersVisible = function () {\r\n        return this.getIsDayNumbersVisible() ||\r\n            this.renderProps.cellWeekNumbersVisible ||\r\n            this.renderProps.colWeekNumbersVisible;\r\n    };\r\n    DayGrid.prototype.getIsDayNumbersVisible = function () {\r\n        return this.rowCnt > 1;\r\n    };\r\n    /* Grid Number Rendering\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGrid.prototype.renderNumberTrHtml = function (row) {\r\n        var intro = this.renderProps.renderNumberIntroHtml(row, this);\r\n        return '' +\r\n            '<tr>' +\r\n            (this.isRtl ? '' : intro) +\r\n            this.renderNumberCellsHtml(row) +\r\n            (this.isRtl ? intro : '') +\r\n            '</tr>';\r\n    };\r\n    DayGrid.prototype.renderNumberCellsHtml = function (row) {\r\n        var htmls = [];\r\n        var col;\r\n        var date;\r\n        for (col = 0; col < this.colCnt; col++) {\r\n            date = this.props.cells[row][col].date;\r\n            htmls.push(this.renderNumberCellHtml(date));\r\n        }\r\n        if (this.isRtl) {\r\n            htmls.reverse();\r\n        }\r\n        return htmls.join('');\r\n    };\r\n    // Generates the HTML for the <td>s of the \"number\" row in the DayGrid's content skeleton.\r\n    // The number row will only exist if either day numbers or week numbers are turned on.\r\n    DayGrid.prototype.renderNumberCellHtml = function (date) {\r\n        if (date === null) {\r\n            return '<td></td>';\r\n        }\r\n        var _a = this, view = _a.view, dateEnv = _a.dateEnv;\r\n        var html = '';\r\n        var isDateValid = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"rangeContainsMarker\"])(this.props.dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.\r\n        var isDayNumberVisible = this.getIsDayNumbersVisible() && isDateValid;\r\n        var classes;\r\n        var weekCalcFirstDow;\r\n        if (!isDayNumberVisible && !this.renderProps.cellWeekNumbersVisible) {\r\n            // no numbers in day cell (week number must be along the side)\r\n            return '<td></td>'; //  will create an empty space above events :(\r\n        }\r\n        classes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"getDayClasses\"])(date, this.props.dateProfile, this.context);\r\n        classes.unshift('fc-day-top');\r\n        if (this.renderProps.cellWeekNumbersVisible) {\r\n            weekCalcFirstDow = dateEnv.weekDow;\r\n        }\r\n        html += '<td class=\"' + classes.join(' ') + '\"' +\r\n            (isDateValid ?\r\n                ' data-date=\"' + dateEnv.formatIso(date, { omitTime: true }) + '\"' :\r\n                '') +\r\n            '>';\r\n        if (this.renderProps.cellWeekNumbersVisible && (date.getUTCDay() === weekCalcFirstDow)) {\r\n            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"buildGotoAnchorHtml\"])(view, { date: date, type: 'week' }, { 'class': 'fc-week-number' }, dateEnv.format(date, WEEK_NUM_FORMAT) // inner HTML\r\n            );\r\n        }\r\n        if (isDayNumberVisible) {\r\n            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"buildGotoAnchorHtml\"])(view, date, { 'class': 'fc-day-number' }, '<span class=\"fc-day-number-weekday\">' + moment__WEBPACK_IMPORTED_MODULE_8___default()(date).format('dd') + '</span>' + dateEnv.format(date, DAY_NUM_FORMAT) // inner HTML\r\n            );\r\n        }\r\n        html += '</td>';\r\n        return html;\r\n    };\r\n    /* Sizing\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGrid.prototype.updateSize = function (isResize) {\r\n        var _a = this, fillRenderer = _a.fillRenderer, eventRenderer = _a.eventRenderer, mirrorRenderer = _a.mirrorRenderer;\r\n        if (isResize ||\r\n            this.isCellSizesDirty ||\r\n            this.view.calendar.isEventsUpdated // hack\r\n        ) {\r\n            this.buildPositionCaches();\r\n            this.isCellSizesDirty = false;\r\n        }\r\n        fillRenderer.computeSizes(isResize);\r\n        eventRenderer.computeSizes(isResize);\r\n        mirrorRenderer.computeSizes(isResize);\r\n        fillRenderer.assignSizes(isResize);\r\n        eventRenderer.assignSizes(isResize);\r\n        mirrorRenderer.assignSizes(isResize);\r\n    };\r\n    DayGrid.prototype.buildPositionCaches = function () {\r\n        this.buildColPositions();\r\n        this.buildRowPositions();\r\n    };\r\n    DayGrid.prototype.buildColPositions = function () {\r\n        this.colPositions.build();\r\n    };\r\n    DayGrid.prototype.buildRowPositions = function () {\r\n        this.rowPositions.build();\r\n        this.rowPositions.bottoms[this.rowCnt - 1] += this.bottomCoordPadding; // hack\r\n    };\r\n    /* Hit System\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGrid.prototype.positionToHit = function (leftPosition, topPosition) {\r\n        var _a = this, colPositions = _a.colPositions, rowPositions = _a.rowPositions;\r\n        var col = colPositions.leftToIndex(leftPosition);\r\n        var row = rowPositions.topToIndex(topPosition);\r\n        if (row != null && col != null && this.props.cells[row][col].date !== null) {\r\n            return {\r\n                row: row,\r\n                col: col,\r\n                dateSpan: {\r\n                    range: this.getCellRange(row, col),\r\n                    allDay: true\r\n                },\r\n                dayEl: this.getCellEl(row, col),\r\n                relativeRect: {\r\n                    left: colPositions.lefts[col],\r\n                    right: colPositions.rights[col],\r\n                    top: rowPositions.tops[row],\r\n                    bottom: rowPositions.bottoms[row]\r\n                }\r\n            };\r\n        }\r\n    };\r\n    /* Cell System\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    // FYI: the first column is the leftmost column, regardless of date\r\n    DayGrid.prototype.getCellEl = function (row, col) {\r\n        return this.cellEls[row * this.colCnt + col];\r\n    };\r\n    /* Event Drag Visualization\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGrid.prototype._renderEventDrag = function (state) {\r\n        if (state) {\r\n            this.eventRenderer.hideByHash(state.affectedInstances);\r\n            this.fillRenderer.renderSegs('highlight', state.segs);\r\n        }\r\n    };\r\n    DayGrid.prototype._unrenderEventDrag = function (state) {\r\n        if (state) {\r\n            this.eventRenderer.showByHash(state.affectedInstances);\r\n            this.fillRenderer.unrender('highlight');\r\n        }\r\n    };\r\n    /* Event Resize Visualization\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGrid.prototype._renderEventResize = function (state) {\r\n        if (state) {\r\n            this.eventRenderer.hideByHash(state.affectedInstances);\r\n            this.fillRenderer.renderSegs('highlight', state.segs);\r\n            this.mirrorRenderer.renderSegs(state.segs, { isResizing: true, sourceSeg: state.sourceSeg });\r\n        }\r\n    };\r\n    DayGrid.prototype._unrenderEventResize = function (state) {\r\n        if (state) {\r\n            this.eventRenderer.showByHash(state.affectedInstances);\r\n            this.fillRenderer.unrender('highlight');\r\n            this.mirrorRenderer.unrender(state.segs, { isResizing: true, sourceSeg: state.sourceSeg });\r\n        }\r\n    };\r\n    /* More+ Link Popover\r\n    ------------------------------------------------------------------------------------------------------------------*/\r\n    DayGrid.prototype.removeSegPopover = function () {\r\n        if (this.segPopover) {\r\n            this.segPopover.hide(); // in handler, will call segPopover's removeElement\r\n        }\r\n    };\r\n    // Limits the number of \"levels\" (vertically stacking layers of events) for each row of the grid.\r\n    // `levelLimit` can be false (don't limit), a number, or true (should be computed).\r\n    DayGrid.prototype.limitRows = function (levelLimit) {\r\n        var rowStructs = this.eventRenderer.rowStructs || [];\r\n        var row; // row #\r\n        var rowLevelLimit;\r\n        for (row = 0; row < rowStructs.length; row++) {\r\n            this.unlimitRow(row);\r\n            if (!levelLimit) {\r\n                rowLevelLimit = false;\r\n            }\r\n            else if (typeof levelLimit === 'number') {\r\n                rowLevelLimit = levelLimit;\r\n            }\r\n            else {\r\n                rowLevelLimit = this.computeRowLevelLimit(row);\r\n            }\r\n            if (rowLevelLimit !== false) {\r\n                this.limitRow(row, rowLevelLimit);\r\n            }\r\n        }\r\n    };\r\n    // Computes the number of levels a row will accomodate without going outside its bounds.\r\n    // Assumes the row is \"rigid\" (maintains a constant height regardless of what is inside).\r\n    // `row` is the row number.\r\n    DayGrid.prototype.computeRowLevelLimit = function (row) {\r\n        var rowEl = this.rowEls[row]; // the containing \"fake\" row div\r\n        var rowBottom = rowEl.getBoundingClientRect().bottom; // relative to viewport!\r\n        var trEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"findChildren\"])(this.eventRenderer.rowStructs[row].tbodyEl);\r\n        var i;\r\n        var trEl;\r\n        // Reveal one level <tr> at a time and stop when we find one out of bounds\r\n        for (i = 0; i < trEls.length; i++) {\r\n            trEl = trEls[i];\r\n            trEl.classList.remove('fc-limited'); // reset to original state (reveal)\r\n            if (trEl.getBoundingClientRect().bottom > rowBottom) {\r\n                return i;\r\n            }\r\n        }\r\n        return false; // should not limit at all\r\n    };\r\n    // Limits the given grid row to the maximum number of levels and injects \"more\" links if necessary.\r\n    // `row` is the row number.\r\n    // `levelLimit` is a number for the maximum (inclusive) number of levels allowed.\r\n    DayGrid.prototype.limitRow = function (row, levelLimit) {\r\n        var _this = this;\r\n        var _a = this, colCnt = _a.colCnt, isRtl = _a.isRtl;\r\n        var rowStruct = this.eventRenderer.rowStructs[row];\r\n        var moreNodes = []; // array of \"more\" <a> links and <td> DOM nodes\r\n        var col = 0; // col #, left-to-right (not chronologically)\r\n        var levelSegs; // array of segment objects in the last allowable level, ordered left-to-right\r\n        var cellMatrix; // a matrix (by level, then column) of all <td> elements in the row\r\n        var limitedNodes; // array of temporarily hidden level <tr> and segment <td> DOM nodes\r\n        var i;\r\n        var seg;\r\n        var segsBelow; // array of segment objects below `seg` in the current `col`\r\n        var totalSegsBelow; // total number of segments below `seg` in any of the columns `seg` occupies\r\n        var colSegsBelow; // array of segment arrays, below seg, one for each column (offset from segs's first column)\r\n        var td;\r\n        var rowSpan;\r\n        var segMoreNodes; // array of \"more\" <td> cells that will stand-in for the current seg's cell\r\n        var j;\r\n        var moreTd;\r\n        var moreWrap;\r\n        var moreLink;\r\n        // Iterates through empty level cells and places \"more\" links inside if need be\r\n        var emptyCellsUntil = function (endCol) {\r\n            while (col < endCol) {\r\n                segsBelow = _this.getCellSegs(row, col, levelLimit);\r\n                if (segsBelow.length) {\r\n                    td = cellMatrix[levelLimit - 1][col];\r\n                    moreLink = _this.renderMoreLink(row, col, segsBelow);\r\n                    moreWrap = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"])('div', null, moreLink);\r\n                    td.appendChild(moreWrap);\r\n                    moreNodes.push(moreWrap);\r\n                }\r\n                col++;\r\n            }\r\n        };\r\n        if (levelLimit && levelLimit < rowStruct.segLevels.length) { // is it actually over the limit?\r\n            levelSegs = rowStruct.segLevels[levelLimit - 1];\r\n            cellMatrix = rowStruct.cellMatrix;\r\n            limitedNodes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"findChildren\"])(rowStruct.tbodyEl).slice(levelLimit); // get level <tr> elements past the limit\r\n            limitedNodes.forEach(function (node) {\r\n                node.classList.add('fc-limited'); // hide elements and get a simple DOM-nodes array\r\n            });\r\n            // iterate though segments in the last allowable level\r\n            for (i = 0; i < levelSegs.length; i++) {\r\n                seg = levelSegs[i];\r\n                var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;\r\n                var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;\r\n                emptyCellsUntil(leftCol); // process empty cells before the segment\r\n                // determine *all* segments below `seg` that occupy the same columns\r\n                colSegsBelow = [];\r\n                totalSegsBelow = 0;\r\n                while (col <= rightCol) {\r\n                    segsBelow = this.getCellSegs(row, col, levelLimit);\r\n                    colSegsBelow.push(segsBelow);\r\n                    totalSegsBelow += segsBelow.length;\r\n                    col++;\r\n                }\r\n                if (totalSegsBelow) { // do we need to replace this segment with one or many \"more\" links?\r\n                    td = cellMatrix[levelLimit - 1][leftCol]; // the segment's parent cell\r\n                    rowSpan = td.rowSpan || 1;\r\n                    segMoreNodes = [];\r\n                    // make a replacement <td> for each column the segment occupies. will be one for each colspan\r\n                    for (j = 0; j < colSegsBelow.length; j++) {\r\n                        moreTd = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"])('td', { className: 'fc-more-cell', rowSpan: rowSpan });\r\n                        segsBelow = colSegsBelow[j];\r\n                        moreLink = this.renderMoreLink(row, leftCol + j, [seg].concat(segsBelow) // count seg as hidden too\r\n                        );\r\n                        moreWrap = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"])('div', null, moreLink);\r\n                        moreTd.appendChild(moreWrap);\r\n                        segMoreNodes.push(moreTd);\r\n                        moreNodes.push(moreTd);\r\n                    }\r\n                    td.classList.add('fc-limited');\r\n                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"insertAfterElement\"])(td, segMoreNodes);\r\n                    limitedNodes.push(td);\r\n                }\r\n            }\r\n            emptyCellsUntil(this.colCnt); // finish off the level\r\n            rowStruct.moreEls = moreNodes; // for easy undoing later\r\n            rowStruct.limitedEls = limitedNodes; // for easy undoing later\r\n        }\r\n    };\r\n    // Reveals all levels and removes all \"more\"-related elements for a grid's row.\r\n    // `row` is a row number.\r\n    DayGrid.prototype.unlimitRow = function (row) {\r\n        var rowStruct = this.eventRenderer.rowStructs[row];\r\n        if (rowStruct.moreEls) {\r\n            rowStruct.moreEls.forEach(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"removeElement\"]);\r\n            rowStruct.moreEls = null;\r\n        }\r\n        if (rowStruct.limitedEls) {\r\n            rowStruct.limitedEls.forEach(function (limitedEl) {\r\n                limitedEl.classList.remove('fc-limited');\r\n            });\r\n            rowStruct.limitedEls = null;\r\n        }\r\n    };\r\n    // Renders an <a> element that represents hidden event element for a cell.\r\n    // Responsible for attaching click handler as well.\r\n    DayGrid.prototype.renderMoreLink = function (row, col, hiddenSegs) {\r\n        var _this = this;\r\n        var _a = this, view = _a.view, dateEnv = _a.dateEnv;\r\n        var a = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"])('a', { className: 'fc-more' });\r\n        a.innerText = this.getMoreLinkText(hiddenSegs.length);\r\n        a.addEventListener('click', function (ev) {\r\n            var clickOption = _this.opt('eventLimitClick');\r\n            var _col = _this.isRtl ? _this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?\r\n            var date = _this.props.cells[row][_col].date;\r\n            var moreEl = ev.currentTarget;\r\n            var dayEl = _this.getCellEl(row, col);\r\n            var allSegs = _this.getCellSegs(row, col);\r\n            // rescope the segments to be within the cell's date\r\n            var reslicedAllSegs = _this.resliceDaySegs(allSegs, date);\r\n            var reslicedHiddenSegs = _this.resliceDaySegs(hiddenSegs, date);\r\n            if (typeof clickOption === 'function') {\r\n                // the returned value can be an atomic option\r\n                clickOption = _this.publiclyTrigger('eventLimitClick', [\r\n                    {\r\n                        date: dateEnv.toDate(date),\r\n                        allDay: true,\r\n                        dayEl: dayEl,\r\n                        moreEl: moreEl,\r\n                        segs: reslicedAllSegs,\r\n                        hiddenSegs: reslicedHiddenSegs,\r\n                        jsEvent: ev,\r\n                        view: view\r\n                    }\r\n                ]);\r\n            }\r\n            if (clickOption === 'popover') {\r\n                _this.showSegPopover(row, col, moreEl, reslicedAllSegs);\r\n            }\r\n            else if (typeof clickOption === 'string') { // a view name\r\n                view.calendar.zoomTo(date, clickOption);\r\n            }\r\n        });\r\n        return a;\r\n    };\r\n    // Reveals the popover that displays all events within a cell\r\n    DayGrid.prototype.showSegPopover = function (row, col, moreLink, segs) {\r\n        var _this = this;\r\n        var _a = this, calendar = _a.calendar, view = _a.view, theme = _a.theme;\r\n        var _col = this.isRtl ? this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?\r\n        var moreWrap = moreLink.parentNode; // the <div> wrapper around the <a>\r\n        var topEl; // the element we want to match the top coordinate of\r\n        var options;\r\n        if (this.rowCnt === 1) {\r\n            topEl = view.el; // will cause the popover to cover any sort of header\r\n        }\r\n        else {\r\n            topEl = this.rowEls[row]; // will align with top of row\r\n        }\r\n        options = {\r\n            className: 'fc-more-popover ' + theme.getClass('popover'),\r\n            parentEl: view.el,\r\n            top: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"computeRect\"])(topEl).top,\r\n            autoHide: true,\r\n            content: function (el) {\r\n                _this.segPopoverTile = new _DayTile__WEBPACK_IMPORTED_MODULE_6__[\"default\"](_this.context, el);\r\n                _this.updateSegPopoverTile(_this.props.cells[row][_col].date, segs);\r\n            },\r\n            hide: function () {\r\n                _this.segPopoverTile.destroy();\r\n                _this.segPopoverTile = null;\r\n                _this.segPopover.destroy();\r\n                _this.segPopover = null;\r\n            }\r\n        };\r\n        // Determine horizontal coordinate.\r\n        // We use the moreWrap instead of the <td> to avoid border confusion.\r\n        if (this.isRtl) {\r\n            options.right = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"computeRect\"])(moreWrap).right + 1; // +1 to be over cell border\r\n        }\r\n        else {\r\n            options.left = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"computeRect\"])(moreWrap).left - 1; // -1 to be over cell border\r\n        }\r\n        this.segPopover = new _Popover__WEBPACK_IMPORTED_MODULE_2__[\"default\"](options);\r\n        this.segPopover.show();\r\n        calendar.releaseAfterSizingTriggers(); // hack for eventPositioned\r\n    };\r\n    // Given the events within an array of segment objects, reslice them to be in a single day\r\n    DayGrid.prototype.resliceDaySegs = function (segs, dayDate) {\r\n        var dayStart = dayDate;\r\n        var dayEnd = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"addDays\"])(dayStart, 1);\r\n        var dayRange = { start: dayStart, end: dayEnd };\r\n        var newSegs = [];\r\n        for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {\r\n            var seg = segs_1[_i];\r\n            var eventRange = seg.eventRange;\r\n            var origRange = eventRange.range;\r\n            var slicedRange = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"intersectRanges\"])(origRange, dayRange);\r\n            if (slicedRange) {\r\n                newSegs.push(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"])({}, seg), { eventRange: {\r\n                        def: eventRange.def,\r\n                        ui: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"])({}, eventRange.ui), { durationEditable: false }),\r\n                        instance: eventRange.instance,\r\n                        range: slicedRange\r\n                    }, isStart: seg.isStart && slicedRange.start.valueOf() === origRange.start.valueOf(), isEnd: seg.isEnd && slicedRange.end.valueOf() === origRange.end.valueOf() }));\r\n            }\r\n        }\r\n        return newSegs;\r\n    };\r\n    // Generates the text that should be inside a \"more\" link, given the number of events it represents\r\n    DayGrid.prototype.getMoreLinkText = function (num) {\r\n        var opt = this.opt('eventLimitText');\r\n        if (typeof opt === 'function') {\r\n            return opt(num);\r\n        }\r\n        else {\r\n            return '+' + num + ' ' + opt;\r\n        }\r\n    };\r\n    // Returns segments within a given cell.\r\n    // If `startLevel` is specified, returns only events including and below that level. Otherwise returns all segs.\r\n    DayGrid.prototype.getCellSegs = function (row, col, startLevel) {\r\n        var segMatrix = this.eventRenderer.rowStructs[row].segMatrix;\r\n        var level = startLevel || 0;\r\n        var segs = [];\r\n        var seg;\r\n        while (level < segMatrix.length) {\r\n            seg = segMatrix[level][col];\r\n            if (seg) {\r\n                segs.push(seg);\r\n            }\r\n            level++;\r\n        }\r\n        return segs;\r\n    };\r\n    return DayGrid;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"DateComponent\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayGrid);\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayGrid.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Popover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Popover */ "./src/Popover.ts");
+/* harmony import */ var _DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DayGridEventRenderer */ "./src/DayGridEventRenderer.ts");
+/* harmony import */ var _DayGridMirrorRenderer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DayGridMirrorRenderer */ "./src/DayGridMirrorRenderer.ts");
+/* harmony import */ var _DayGridFillRenderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DayGridFillRenderer */ "./src/DayGridFillRenderer.ts");
+/* harmony import */ var _DayTile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./DayTile */ "./src/DayTile.ts");
+/* harmony import */ var _DayBgRow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DayBgRow */ "./src/DayBgRow.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! moment */ "moment");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+var DAY_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createFormatter"])({ day: 'numeric' });
+var WEEK_NUM_FORMAT = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createFormatter"])({ week: 'numeric' });
+var DayGrid = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGrid, _super);
+    function DayGrid(context, el, renderProps) {
+        var _this = _super.call(this, context, el) || this;
+        _this.bottomCoordPadding = 0; // hack for extending the hit area for the last row of the coordinate grid
+        _this.isCellSizesDirty = false;
+        var eventRenderer = _this.eventRenderer = new _DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_3__["default"](_this);
+        var fillRenderer = _this.fillRenderer = new _DayGridFillRenderer__WEBPACK_IMPORTED_MODULE_5__["default"](_this);
+        _this.mirrorRenderer = new _DayGridMirrorRenderer__WEBPACK_IMPORTED_MODULE_4__["default"](_this);
+        var renderCells = _this.renderCells = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(_this._renderCells, _this._unrenderCells);
+        _this.renderBusinessHours = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'businessHours'), fillRenderer.unrender.bind(fillRenderer, 'businessHours'), [renderCells]);
+        _this.renderDateSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'highlight'), fillRenderer.unrender.bind(fillRenderer, 'highlight'), [renderCells]);
+        _this.renderBgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(fillRenderer.renderSegs.bind(fillRenderer, 'bgEvent'), fillRenderer.unrender.bind(fillRenderer, 'bgEvent'), [renderCells]);
+        _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderCells]);
+        _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);
+        _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(_this._renderEventDrag, _this._unrenderEventDrag, [renderCells]);
+        _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(_this._renderEventResize, _this._unrenderEventResize, [renderCells]);
+        _this.renderProps = renderProps;
+        return _this;
+    }
+    DayGrid.prototype.render = function (props) {
+        var cells = props.cells;
+        this.rowCnt = cells.length;
+        this.colCnt = cells[0].length;
+        this.renderCells(cells, props.isRigid);
+        this.renderBusinessHours(props.businessHourSegs);
+        this.renderDateSelection(props.dateSelectionSegs);
+        this.renderBgEvents(props.bgEventSegs);
+        this.renderFgEvents(props.fgEventSegs);
+        this.renderEventSelection(props.eventSelection);
+        this.renderEventDrag(props.eventDrag);
+        this.renderEventResize(props.eventResize);
+        if (this.segPopoverTile) {
+            this.updateSegPopoverTile();
+        }
+    };
+    DayGrid.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderCells.unrender(); // will unrender everything else
+    };
+    DayGrid.prototype.getCellRange = function (row, col) {
+        var start = this.props.cells[row][col].date;
+        var end = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["addDays"])(start, 1);
+        return { start: start, end: end };
+    };
+    DayGrid.prototype.updateSegPopoverTile = function (date, segs) {
+        var ownProps = this.props;
+        this.segPopoverTile.receiveProps({
+            date: date || this.segPopoverTile.props.date,
+            fgSegs: segs || this.segPopoverTile.props.fgSegs,
+            eventSelection: ownProps.eventSelection,
+            eventDragInstances: ownProps.eventDrag ? ownProps.eventDrag.affectedInstances : null,
+            eventResizeInstances: ownProps.eventResize ? ownProps.eventResize.affectedInstances : null
+        });
+    };
+    /* Date Rendering
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype._renderCells = function (cells, isRigid) {
+        var _a = this, view = _a.view, dateEnv = _a.dateEnv;
+        var _b = this, rowCnt = _b.rowCnt, colCnt = _b.colCnt;
+        var html = '';
+        var row;
+        var col;
+        for (row = 0; row < rowCnt; row++) {
+            html += this.renderDayRowHtml(row, isRigid);
+        }
+        this.el.innerHTML = html;
+        this.rowEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["findElements"])(this.el, '.fc-row');
+        this.cellEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["findElements"])(this.el, '.fc-day, .fc-disabled-day');
+        if (this.isRtl) {
+            this.cellEls.reverse();
+        }
+        this.rowPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["PositionCache"](this.el, this.rowEls, false, true // vertical
+        );
+        this.colPositions = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["PositionCache"](this.el, this.cellEls.slice(0, colCnt), // only the first row
+        true, false // horizontal
+        );
+        // trigger dayRender with each cell's element
+        for (row = 0; row < rowCnt; row++) {
+            for (col = 0; col < colCnt; col++) {
+                if (cells[row][col] === undefined) {
+                    break;
+                }
+                if (cells[row][col].date != null) {
+                    this.publiclyTrigger('dayRender', [
+                        {
+                            date: dateEnv.toDate(cells[row][col].date),
+                            el: this.getCellEl(row, col),
+                            view: view
+                        }
+                    ]);
+                }
+            }
+        }
+        this.isCellSizesDirty = true;
+    };
+    DayGrid.prototype._unrenderCells = function () {
+        this.removeSegPopover();
+    };
+    // Generates the HTML for a single row, which is a div that wraps a table.
+    // `row` is the row number.
+    DayGrid.prototype.renderDayRowHtml = function (row, isRigid) {
+        var theme = this.theme;
+        var classes = ['fc-row', 'fc-week', theme.getClass('dayRow')];
+        if (isRigid) {
+            classes.push('fc-rigid');
+        }
+        var bgRow = new _DayBgRow__WEBPACK_IMPORTED_MODULE_7__["default"](this.context);
+        return '' +
+            '<div class="' + classes.join(' ') + '">' +
+            '<div class="fc-row-monthname fc-content"><span>' + moment__WEBPACK_IMPORTED_MODULE_8___default()(this.props.cells[row][0].date).format('MMM') + '</span></div>' +
+            '<div class="fc-bg">' +
+            '<table class="' + theme.getClass('tableGrid') + '">' +
+            bgRow.renderHtml({
+                cells: this.props.cells[row],
+                dateProfile: this.props.dateProfile,
+                renderIntroHtml: this.renderProps.renderBgIntroHtml
+            }) +
+            '</table>' +
+            '</div>' +
+            '<div class="fc-content-skeleton">' +
+            '<table>' +
+            (this.getIsNumbersVisible() ?
+                '<thead>' +
+                    this.renderNumberTrHtml(row) +
+                    '</thead>' :
+                '') +
+            '</table>' +
+            '</div>' +
+            '</div>';
+    };
+    DayGrid.prototype.getIsNumbersVisible = function () {
+        return this.getIsDayNumbersVisible() ||
+            this.renderProps.cellWeekNumbersVisible ||
+            this.renderProps.colWeekNumbersVisible;
+    };
+    DayGrid.prototype.getIsDayNumbersVisible = function () {
+        return this.rowCnt > 1;
+    };
+    /* Grid Number Rendering
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.renderNumberTrHtml = function (row) {
+        var intro = this.renderProps.renderNumberIntroHtml(row, this);
+        return '' +
+            '<tr>' +
+            (this.isRtl ? '' : intro) +
+            this.renderNumberCellsHtml(row) +
+            (this.isRtl ? intro : '') +
+            '</tr>';
+    };
+    DayGrid.prototype.renderNumberCellsHtml = function (row) {
+        var htmls = [];
+        var col;
+        var date;
+        for (col = 0; col < this.colCnt; col++) {
+            date = this.props.cells[row][col].date;
+            htmls.push(this.renderNumberCellHtml(date));
+        }
+        if (this.isRtl) {
+            htmls.reverse();
+        }
+        return htmls.join('');
+    };
+    // Generates the HTML for the <td>s of the "number" row in the DayGrid's content skeleton.
+    // The number row will only exist if either day numbers or week numbers are turned on.
+    DayGrid.prototype.renderNumberCellHtml = function (date) {
+        if (date === null) {
+            return '<td></td>';
+        }
+        var _a = this, view = _a.view, dateEnv = _a.dateEnv;
+        var html = '';
+        var isDateValid = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["rangeContainsMarker"])(this.props.dateProfile.activeRange, date); // TODO: called too frequently. cache somehow.
+        var isDayNumberVisible = this.getIsDayNumbersVisible() && isDateValid;
+        var classes;
+        var weekCalcFirstDow;
+        if (!isDayNumberVisible && !this.renderProps.cellWeekNumbersVisible) {
+            // no numbers in day cell (week number must be along the side)
+            return '<td></td>'; //  will create an empty space above events :(
+        }
+        classes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["getDayClasses"])(date, this.props.dateProfile, this.context);
+        classes.unshift('fc-day-top');
+        if (this.renderProps.cellWeekNumbersVisible) {
+            weekCalcFirstDow = dateEnv.weekDow;
+        }
+        html += '<td class="' + classes.join(' ') + '"' +
+            (isDateValid ?
+                ' data-date="' + dateEnv.formatIso(date, { omitTime: true }) + '"' :
+                '') +
+            '>';
+        if (this.renderProps.cellWeekNumbersVisible && (date.getUTCDay() === weekCalcFirstDow)) {
+            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildGotoAnchorHtml"])(view, { date: date, type: 'week' }, { 'class': 'fc-week-number' }, dateEnv.format(date, WEEK_NUM_FORMAT) // inner HTML
+            );
+        }
+        if (isDayNumberVisible) {
+            html += Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["buildGotoAnchorHtml"])(view, date, { 'class': 'fc-day-number' }, '<span class="fc-day-number-weekday">' + moment__WEBPACK_IMPORTED_MODULE_8___default()(date).format('dd') + '</span>' + dateEnv.format(date, DAY_NUM_FORMAT) // inner HTML
+            );
+        }
+        html += '</td>';
+        return html;
+    };
+    /* Sizing
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.updateSize = function (isResize) {
+        var _a = this, fillRenderer = _a.fillRenderer, eventRenderer = _a.eventRenderer, mirrorRenderer = _a.mirrorRenderer;
+        if (isResize ||
+            this.isCellSizesDirty ||
+            this.view.calendar.isEventsUpdated // hack
+        ) {
+            this.buildPositionCaches();
+            this.isCellSizesDirty = false;
+        }
+        fillRenderer.computeSizes(isResize);
+        eventRenderer.computeSizes(isResize);
+        mirrorRenderer.computeSizes(isResize);
+        fillRenderer.assignSizes(isResize);
+        eventRenderer.assignSizes(isResize);
+        mirrorRenderer.assignSizes(isResize);
+    };
+    DayGrid.prototype.buildPositionCaches = function () {
+        this.buildColPositions();
+        this.buildRowPositions();
+    };
+    DayGrid.prototype.buildColPositions = function () {
+        this.colPositions.build();
+    };
+    DayGrid.prototype.buildRowPositions = function () {
+        this.rowPositions.build();
+        this.rowPositions.bottoms[this.rowCnt - 1] += this.bottomCoordPadding; // hack
+    };
+    /* Hit System
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.positionToHit = function (leftPosition, topPosition) {
+        var _a = this, colPositions = _a.colPositions, rowPositions = _a.rowPositions;
+        var col = colPositions.leftToIndex(leftPosition);
+        var row = rowPositions.topToIndex(topPosition);
+        if (row != null && col != null && this.props.cells[row][col].date !== null) {
+            return {
+                row: row,
+                col: col,
+                dateSpan: {
+                    range: this.getCellRange(row, col),
+                    allDay: true
+                },
+                dayEl: this.getCellEl(row, col),
+                relativeRect: {
+                    left: colPositions.lefts[col],
+                    right: colPositions.rights[col],
+                    top: rowPositions.tops[row],
+                    bottom: rowPositions.bottoms[row]
+                }
+            };
+        }
+    };
+    /* Cell System
+    ------------------------------------------------------------------------------------------------------------------*/
+    // FYI: the first column is the leftmost column, regardless of date
+    DayGrid.prototype.getCellEl = function (row, col) {
+        return this.cellEls[row * this.colCnt + col];
+    };
+    /* Event Drag Visualization
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype._renderEventDrag = function (state) {
+        if (state) {
+            this.eventRenderer.hideByHash(state.affectedInstances);
+            this.fillRenderer.renderSegs('highlight', state.segs);
+        }
+    };
+    DayGrid.prototype._unrenderEventDrag = function (state) {
+        if (state) {
+            this.eventRenderer.showByHash(state.affectedInstances);
+            this.fillRenderer.unrender('highlight');
+        }
+    };
+    /* Event Resize Visualization
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype._renderEventResize = function (state) {
+        if (state) {
+            this.eventRenderer.hideByHash(state.affectedInstances);
+            this.fillRenderer.renderSegs('highlight', state.segs);
+            this.mirrorRenderer.renderSegs(state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+        }
+    };
+    DayGrid.prototype._unrenderEventResize = function (state) {
+        if (state) {
+            this.eventRenderer.showByHash(state.affectedInstances);
+            this.fillRenderer.unrender('highlight');
+            this.mirrorRenderer.unrender(state.segs, { isResizing: true, sourceSeg: state.sourceSeg });
+        }
+    };
+    /* More+ Link Popover
+    ------------------------------------------------------------------------------------------------------------------*/
+    DayGrid.prototype.removeSegPopover = function () {
+        if (this.segPopover) {
+            this.segPopover.hide(); // in handler, will call segPopover's removeElement
+        }
+    };
+    // Limits the number of "levels" (vertically stacking layers of events) for each row of the grid.
+    // `levelLimit` can be false (don't limit), a number, or true (should be computed).
+    DayGrid.prototype.limitRows = function (levelLimit) {
+        var rowStructs = this.eventRenderer.rowStructs || [];
+        var row; // row #
+        var rowLevelLimit;
+        for (row = 0; row < rowStructs.length; row++) {
+            this.unlimitRow(row);
+            if (!levelLimit) {
+                rowLevelLimit = false;
+            }
+            else if (typeof levelLimit === 'number') {
+                rowLevelLimit = levelLimit;
+            }
+            else {
+                rowLevelLimit = this.computeRowLevelLimit(row);
+            }
+            if (rowLevelLimit !== false) {
+                this.limitRow(row, rowLevelLimit);
+            }
+        }
+    };
+    // Computes the number of levels a row will accomodate without going outside its bounds.
+    // Assumes the row is "rigid" (maintains a constant height regardless of what is inside).
+    // `row` is the row number.
+    DayGrid.prototype.computeRowLevelLimit = function (row) {
+        var rowEl = this.rowEls[row]; // the containing "fake" row div
+        var rowBottom = rowEl.getBoundingClientRect().bottom; // relative to viewport!
+        var trEls = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["findChildren"])(this.eventRenderer.rowStructs[row].tbodyEl);
+        var i;
+        var trEl;
+        // Reveal one level <tr> at a time and stop when we find one out of bounds
+        for (i = 0; i < trEls.length; i++) {
+            trEl = trEls[i];
+            trEl.classList.remove('fc-limited'); // reset to original state (reveal)
+            if (trEl.getBoundingClientRect().bottom > rowBottom) {
+                return i;
+            }
+        }
+        return false; // should not limit at all
+    };
+    // Limits the given grid row to the maximum number of levels and injects "more" links if necessary.
+    // `row` is the row number.
+    // `levelLimit` is a number for the maximum (inclusive) number of levels allowed.
+    DayGrid.prototype.limitRow = function (row, levelLimit) {
+        var _this = this;
+        var _a = this, colCnt = _a.colCnt, isRtl = _a.isRtl;
+        var rowStruct = this.eventRenderer.rowStructs[row];
+        var moreNodes = []; // array of "more" <a> links and <td> DOM nodes
+        var col = 0; // col #, left-to-right (not chronologically)
+        var levelSegs; // array of segment objects in the last allowable level, ordered left-to-right
+        var cellMatrix; // a matrix (by level, then column) of all <td> elements in the row
+        var limitedNodes; // array of temporarily hidden level <tr> and segment <td> DOM nodes
+        var i;
+        var seg;
+        var segsBelow; // array of segment objects below `seg` in the current `col`
+        var totalSegsBelow; // total number of segments below `seg` in any of the columns `seg` occupies
+        var colSegsBelow; // array of segment arrays, below seg, one for each column (offset from segs's first column)
+        var td;
+        var rowSpan;
+        var segMoreNodes; // array of "more" <td> cells that will stand-in for the current seg's cell
+        var j;
+        var moreTd;
+        var moreWrap;
+        var moreLink;
+        // Iterates through empty level cells and places "more" links inside if need be
+        var emptyCellsUntil = function (endCol) {
+            while (col < endCol) {
+                segsBelow = _this.getCellSegs(row, col, levelLimit);
+                if (segsBelow.length) {
+                    td = cellMatrix[levelLimit - 1][col];
+                    moreLink = _this.renderMoreLink(row, col, segsBelow);
+                    moreWrap = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"])('div', null, moreLink);
+                    td.appendChild(moreWrap);
+                    moreNodes.push(moreWrap);
+                }
+                col++;
+            }
+        };
+        if (levelLimit && levelLimit < rowStruct.segLevels.length) { // is it actually over the limit?
+            levelSegs = rowStruct.segLevels[levelLimit - 1];
+            cellMatrix = rowStruct.cellMatrix;
+            limitedNodes = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["findChildren"])(rowStruct.tbodyEl).slice(levelLimit); // get level <tr> elements past the limit
+            limitedNodes.forEach(function (node) {
+                node.classList.add('fc-limited'); // hide elements and get a simple DOM-nodes array
+            });
+            // iterate though segments in the last allowable level
+            for (i = 0; i < levelSegs.length; i++) {
+                seg = levelSegs[i];
+                var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
+                var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
+                emptyCellsUntil(leftCol); // process empty cells before the segment
+                // determine *all* segments below `seg` that occupy the same columns
+                colSegsBelow = [];
+                totalSegsBelow = 0;
+                while (col <= rightCol) {
+                    segsBelow = this.getCellSegs(row, col, levelLimit);
+                    colSegsBelow.push(segsBelow);
+                    totalSegsBelow += segsBelow.length;
+                    col++;
+                }
+                if (totalSegsBelow) { // do we need to replace this segment with one or many "more" links?
+                    td = cellMatrix[levelLimit - 1][leftCol]; // the segment's parent cell
+                    rowSpan = td.rowSpan || 1;
+                    segMoreNodes = [];
+                    // make a replacement <td> for each column the segment occupies. will be one for each colspan
+                    for (j = 0; j < colSegsBelow.length; j++) {
+                        moreTd = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"])('td', { className: 'fc-more-cell', rowSpan: rowSpan });
+                        segsBelow = colSegsBelow[j];
+                        moreLink = this.renderMoreLink(row, leftCol + j, [seg].concat(segsBelow) // count seg as hidden too
+                        );
+                        moreWrap = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"])('div', null, moreLink);
+                        moreTd.appendChild(moreWrap);
+                        segMoreNodes.push(moreTd);
+                        moreNodes.push(moreTd);
+                    }
+                    td.classList.add('fc-limited');
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["insertAfterElement"])(td, segMoreNodes);
+                    limitedNodes.push(td);
+                }
+            }
+            emptyCellsUntil(this.colCnt); // finish off the level
+            rowStruct.moreEls = moreNodes; // for easy undoing later
+            rowStruct.limitedEls = limitedNodes; // for easy undoing later
+        }
+    };
+    // Reveals all levels and removes all "more"-related elements for a grid's row.
+    // `row` is a row number.
+    DayGrid.prototype.unlimitRow = function (row) {
+        var rowStruct = this.eventRenderer.rowStructs[row];
+        if (rowStruct.moreEls) {
+            rowStruct.moreEls.forEach(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["removeElement"]);
+            rowStruct.moreEls = null;
+        }
+        if (rowStruct.limitedEls) {
+            rowStruct.limitedEls.forEach(function (limitedEl) {
+                limitedEl.classList.remove('fc-limited');
+            });
+            rowStruct.limitedEls = null;
+        }
+    };
+    // Renders an <a> element that represents hidden event element for a cell.
+    // Responsible for attaching click handler as well.
+    DayGrid.prototype.renderMoreLink = function (row, col, hiddenSegs) {
+        var _this = this;
+        var _a = this, view = _a.view, dateEnv = _a.dateEnv;
+        var a = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', { className: 'fc-more' });
+        a.innerText = this.getMoreLinkText(hiddenSegs.length);
+        a.addEventListener('click', function (ev) {
+            var clickOption = _this.opt('eventLimitClick');
+            var _col = _this.isRtl ? _this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
+            var date = _this.props.cells[row][_col].date;
+            var moreEl = ev.currentTarget;
+            var dayEl = _this.getCellEl(row, col);
+            var allSegs = _this.getCellSegs(row, col);
+            // rescope the segments to be within the cell's date
+            var reslicedAllSegs = _this.resliceDaySegs(allSegs, date);
+            var reslicedHiddenSegs = _this.resliceDaySegs(hiddenSegs, date);
+            if (typeof clickOption === 'function') {
+                // the returned value can be an atomic option
+                clickOption = _this.publiclyTrigger('eventLimitClick', [
+                    {
+                        date: dateEnv.toDate(date),
+                        allDay: true,
+                        dayEl: dayEl,
+                        moreEl: moreEl,
+                        segs: reslicedAllSegs,
+                        hiddenSegs: reslicedHiddenSegs,
+                        jsEvent: ev,
+                        view: view
+                    }
+                ]);
+            }
+            if (clickOption === 'popover') {
+                _this.showSegPopover(row, col, moreEl, reslicedAllSegs);
+            }
+            else if (typeof clickOption === 'string') { // a view name
+                view.calendar.zoomTo(date, clickOption);
+            }
+        });
+        return a;
+    };
+    // Reveals the popover that displays all events within a cell
+    DayGrid.prototype.showSegPopover = function (row, col, moreLink, segs) {
+        var _this = this;
+        var _a = this, calendar = _a.calendar, view = _a.view, theme = _a.theme;
+        var _col = this.isRtl ? this.colCnt - col - 1 : col; // HACK: props.cells has different dir system?
+        var moreWrap = moreLink.parentNode; // the <div> wrapper around the <a>
+        var topEl; // the element we want to match the top coordinate of
+        var options;
+        if (this.rowCnt === 1) {
+            topEl = view.el; // will cause the popover to cover any sort of header
+        }
+        else {
+            topEl = this.rowEls[row]; // will align with top of row
+        }
+        options = {
+            className: 'fc-more-popover ' + theme.getClass('popover'),
+            parentEl: view.el,
+            top: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeRect"])(topEl).top,
+            autoHide: true,
+            content: function (el) {
+                _this.segPopoverTile = new _DayTile__WEBPACK_IMPORTED_MODULE_6__["default"](_this.context, el);
+                _this.updateSegPopoverTile(_this.props.cells[row][_col].date, segs);
+            },
+            hide: function () {
+                _this.segPopoverTile.destroy();
+                _this.segPopoverTile = null;
+                _this.segPopover.destroy();
+                _this.segPopover = null;
+            }
+        };
+        // Determine horizontal coordinate.
+        // We use the moreWrap instead of the <td> to avoid border confusion.
+        if (this.isRtl) {
+            options.right = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeRect"])(moreWrap).right + 1; // +1 to be over cell border
+        }
+        else {
+            options.left = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["computeRect"])(moreWrap).left - 1; // -1 to be over cell border
+        }
+        this.segPopover = new _Popover__WEBPACK_IMPORTED_MODULE_2__["default"](options);
+        this.segPopover.show();
+        calendar.releaseAfterSizingTriggers(); // hack for eventPositioned
+    };
+    // Given the events within an array of segment objects, reslice them to be in a single day
+    DayGrid.prototype.resliceDaySegs = function (segs, dayDate) {
+        var dayStart = dayDate;
+        var dayEnd = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["addDays"])(dayStart, 1);
+        var dayRange = { start: dayStart, end: dayEnd };
+        var newSegs = [];
+        for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
+            var seg = segs_1[_i];
+            var eventRange = seg.eventRange;
+            var origRange = eventRange.range;
+            var slicedRange = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["intersectRanges"])(origRange, dayRange);
+            if (slicedRange) {
+                newSegs.push(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, seg), { eventRange: {
+                        def: eventRange.def,
+                        ui: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, eventRange.ui), { durationEditable: false }),
+                        instance: eventRange.instance,
+                        range: slicedRange
+                    }, isStart: seg.isStart && slicedRange.start.valueOf() === origRange.start.valueOf(), isEnd: seg.isEnd && slicedRange.end.valueOf() === origRange.end.valueOf() }));
+            }
+        }
+        return newSegs;
+    };
+    // Generates the text that should be inside a "more" link, given the number of events it represents
+    DayGrid.prototype.getMoreLinkText = function (num) {
+        var opt = this.opt('eventLimitText');
+        if (typeof opt === 'function') {
+            return opt(num);
+        }
+        else {
+            return '+' + num + ' ' + opt;
+        }
+    };
+    // Returns segments within a given cell.
+    // If `startLevel` is specified, returns only events including and below that level. Otherwise returns all segs.
+    DayGrid.prototype.getCellSegs = function (row, col, startLevel) {
+        var segMatrix = this.eventRenderer.rowStructs[row].segMatrix;
+        var level = startLevel || 0;
+        var segs = [];
+        var seg;
+        while (level < segMatrix.length) {
+            seg = segMatrix[level][col];
+            if (seg) {
+                segs.push(seg);
+            }
+            level++;
+        }
+        return segs;
+    };
+    return DayGrid;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayGrid);
+
 
 /***/ }),
 
@@ -143,7 +1233,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tsli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\nvar DayGridDateProfileGenerator = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGridDateProfileGenerator, _super);\r\n    function DayGridDateProfileGenerator() {\r\n        return _super !== null && _super.apply(this, arguments) || this;\r\n    }\r\n    // Computes the date range that will be rendered.\r\n    DayGridDateProfileGenerator.prototype.buildRenderRange = function (currentRange, currentRangeUnit, isRangeAllDay) {\r\n        var renderRange = _super.prototype.buildRenderRange.call(this, currentRange, currentRangeUnit, isRangeAllDay);\r\n        var start = renderRange.start;\r\n        var end = renderRange.end;\r\n        return { start: start, end: end };\r\n    };\r\n    return DayGridDateProfileGenerator;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"DateProfileGenerator\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayGridDateProfileGenerator);\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayGridDateProfileGenerator.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var DayGridDateProfileGenerator = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGridDateProfileGenerator, _super);
+    function DayGridDateProfileGenerator() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    // Computes the date range that will be rendered.
+    DayGridDateProfileGenerator.prototype.buildRenderRange = function (currentRange, currentRangeUnit, isRangeAllDay) {
+        var renderRange = _super.prototype.buildRenderRange.call(this, currentRange, currentRangeUnit, isRangeAllDay);
+        var start = renderRange.start;
+        var end = renderRange.end;
+        return { start: start, end: end };
+    };
+    return DayGridDateProfileGenerator;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DateProfileGenerator"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayGridDateProfileGenerator);
+
 
 /***/ }),
 
@@ -155,7 +1266,215 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tsli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SimpleDayGridEventRenderer */ \"./src/SimpleDayGridEventRenderer.ts\");\n\r\n\r\n\r\n/* Event-rendering methods for the DayGrid class\r\n----------------------------------------------------------------------------------------------------------------------*/\r\nvar DayGridEventRenderer = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGridEventRenderer, _super);\r\n    function DayGridEventRenderer(dayGrid) {\r\n        var _this = _super.call(this, dayGrid.context) || this;\r\n        _this.dayGrid = dayGrid;\r\n        return _this;\r\n    }\r\n    // Renders the given foreground event segments onto the grid\r\n    DayGridEventRenderer.prototype.attachSegs = function (segs, mirrorInfo) {\r\n        var rowStructs = this.rowStructs = this.renderSegRows(segs);\r\n        // append to each row's content skeleton\r\n        this.dayGrid.rowEls.forEach(function (rowNode, i) {\r\n            rowNode.querySelector('.fc-content-skeleton > table').appendChild(rowStructs[i].tbodyEl);\r\n        });\r\n        // removes the \"more..\" events popover\r\n        if (!mirrorInfo) {\r\n            this.dayGrid.removeSegPopover();\r\n        }\r\n    };\r\n    // Unrenders all currently rendered foreground event segments\r\n    DayGridEventRenderer.prototype.detachSegs = function () {\r\n        var rowStructs = this.rowStructs || [];\r\n        var rowStruct;\r\n        while ((rowStruct = rowStructs.pop())) {\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"removeElement\"])(rowStruct.tbodyEl);\r\n        }\r\n        this.rowStructs = null;\r\n    };\r\n    // Uses the given events array to generate <tbody> elements that should be appended to each row's content skeleton.\r\n    // Returns an array of rowStruct objects (see the bottom of `renderSegRow`).\r\n    // PRECONDITION: each segment shoud already have a rendered and assigned `.el`\r\n    DayGridEventRenderer.prototype.renderSegRows = function (segs) {\r\n        var rowStructs = [];\r\n        var segRows;\r\n        var row;\r\n        segRows = this.groupSegRows(segs); // group into nested arrays\r\n        // iterate each row of segment groupings\r\n        for (row = 0; row < segRows.length; row++) {\r\n            rowStructs.push(this.renderSegRow(row, segRows[row]));\r\n        }\r\n        return rowStructs;\r\n    };\r\n    // Given a row # and an array of segments all in the same row, render a <tbody> element, a skeleton that contains\r\n    // the segments. Returns object with a bunch of internal data about how the render was calculated.\r\n    // NOTE: modifies rowSegs\r\n    DayGridEventRenderer.prototype.renderSegRow = function (row, rowSegs) {\r\n        var dayGrid = this.dayGrid;\r\n        var colCnt = dayGrid.colCnt, isRtl = dayGrid.isRtl;\r\n        var segLevels = this.buildSegLevels(rowSegs); // group into sub-arrays of levels\r\n        var levelCnt = Math.max(1, segLevels.length); // ensure at least one level\r\n        var tbody = document.createElement('tbody');\r\n        var segMatrix = []; // lookup for which segments are rendered into which level+col cells\r\n        var cellMatrix = []; // lookup for all <td> elements of the level+col matrix\r\n        var loneCellMatrix = []; // lookup for <td> elements that only take up a single column\r\n        var i;\r\n        var levelSegs;\r\n        var col;\r\n        var tr;\r\n        var j;\r\n        var seg;\r\n        var td;\r\n        // populates empty cells from the current column (`col`) to `endCol`\r\n        function emptyCellsUntil(endCol) {\r\n            while (col < endCol) {\r\n                // try to grab a cell from the level above and extend its rowspan. otherwise, create a fresh cell\r\n                td = (loneCellMatrix[i - 1] || [])[col];\r\n                if (td) {\r\n                    td.rowSpan = (td.rowSpan || 1) + 1;\r\n                }\r\n                else {\r\n                    td = document.createElement('td');\r\n                    tr.appendChild(td);\r\n                }\r\n                cellMatrix[i][col] = td;\r\n                loneCellMatrix[i][col] = td;\r\n                col++;\r\n            }\r\n        }\r\n        for (i = 0; i < levelCnt; i++) { // iterate through all levels\r\n            levelSegs = segLevels[i];\r\n            col = 0;\r\n            tr = document.createElement('tr');\r\n            segMatrix.push([]);\r\n            cellMatrix.push([]);\r\n            loneCellMatrix.push([]);\r\n            // levelCnt might be 1 even though there are no actual levels. protect against this.\r\n            // this single empty row is useful for styling.\r\n            if (levelSegs) {\r\n                for (j = 0; j < levelSegs.length; j++) { // iterate through segments in level\r\n                    seg = levelSegs[j];\r\n                    var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;\r\n                    var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;\r\n                    emptyCellsUntil(leftCol);\r\n                    // create a container that occupies or more columns. append the event element.\r\n                    td = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createElement\"])('td', { className: 'fc-event-container' }, seg.el);\r\n                    if (leftCol !== rightCol) {\r\n                        td.colSpan = rightCol - leftCol; //+ 1 Hiedra\r\n                    }\r\n                    else { // a single-column segment\r\n                        loneCellMatrix[i][col] = td;\r\n                    }\r\n                    while (col <= rightCol) {\r\n                        cellMatrix[i][col] = td;\r\n                        segMatrix[i][col] = seg;\r\n                        col++;\r\n                    }\r\n                    tr.appendChild(td);\r\n                }\r\n            }\r\n            emptyCellsUntil(colCnt); // finish off the row\r\n            var introHtml = dayGrid.renderProps.renderIntroHtml();\r\n            if (introHtml) {\r\n                if (dayGrid.isRtl) {\r\n                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"appendToElement\"])(tr, introHtml);\r\n                }\r\n                else {\r\n                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"prependToElement\"])(tr, introHtml);\r\n                }\r\n            }\r\n            tbody.appendChild(tr);\r\n        }\r\n        return {\r\n            row: row,\r\n            tbodyEl: tbody,\r\n            cellMatrix: cellMatrix,\r\n            segMatrix: segMatrix,\r\n            segLevels: segLevels,\r\n            segs: rowSegs\r\n        };\r\n    };\r\n    // Stacks a flat array of segments, which are all assumed to be in the same row, into subarrays of vertical levels.\r\n    // NOTE: modifies segs\r\n    DayGridEventRenderer.prototype.buildSegLevels = function (segs) {\r\n        var _a = this.dayGrid, isRtl = _a.isRtl, colCnt = _a.colCnt;\r\n        var levels = [];\r\n        var i;\r\n        var seg;\r\n        var j;\r\n        // Give preference to elements with certain criteria, so they have\r\n        // a chance to be closer to the top.\r\n        segs = this.sortEventSegs(segs);\r\n        for (i = 0; i < segs.length; i++) {\r\n            seg = segs[i];\r\n            // loop through levels, starting with the topmost, until the segment doesn't collide with other segments\r\n            for (j = 0; j < levels.length; j++) {\r\n                if (!isDaySegCollision(seg, levels[j])) {\r\n                    break;\r\n                }\r\n            }\r\n            // `j` now holds the desired subrow index\r\n            seg.level = j;\r\n            seg.leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol; // for sorting only\r\n            seg.rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol // for sorting only\r\n            ;\r\n            (levels[j] || (levels[j] = [])).push(seg);\r\n        }\r\n        // order segments left-to-right. very important if calendar is RTL\r\n        for (j = 0; j < levels.length; j++) {\r\n            levels[j].sort(compareDaySegCols);\r\n        }\r\n        return levels;\r\n    };\r\n    // Given a flat array of segments, return an array of sub-arrays, grouped by each segment's row\r\n    DayGridEventRenderer.prototype.groupSegRows = function (segs) {\r\n        var segRows = [];\r\n        var i;\r\n        for (i = 0; i < this.dayGrid.rowCnt; i++) {\r\n            segRows.push([]);\r\n        }\r\n        for (i = 0; i < segs.length; i++) {\r\n            segRows[segs[i].row].push(segs[i]);\r\n        }\r\n        return segRows;\r\n    };\r\n    // Computes a default `displayEventEnd` value if one is not expliclty defined\r\n    DayGridEventRenderer.prototype.computeDisplayEventEnd = function () {\r\n        return this.dayGrid.colCnt === 1; // we'll likely have space if there's only one day\r\n    };\r\n    return DayGridEventRenderer;\r\n}(_SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayGridEventRenderer);\r\n// Computes whether two segments' columns collide. They are assumed to be in the same row.\r\nfunction isDaySegCollision(seg, otherSegs) {\r\n    var i;\r\n    var otherSeg;\r\n    for (i = 0; i < otherSegs.length; i++) {\r\n        otherSeg = otherSegs[i];\r\n        if (otherSeg.firstCol <= seg.lastCol &&\r\n            otherSeg.lastCol >= seg.firstCol) {\r\n            return true;\r\n        }\r\n    }\r\n    return false;\r\n}\r\n// A cmp function for determining the leftmost event\r\nfunction compareDaySegCols(a, b) {\r\n    return a.leftCol - b.leftCol;\r\n}\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayGridEventRenderer.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SimpleDayGridEventRenderer */ "./src/SimpleDayGridEventRenderer.ts");
+
+
+
+/* Event-rendering methods for the DayGrid class
+----------------------------------------------------------------------------------------------------------------------*/
+var DayGridEventRenderer = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGridEventRenderer, _super);
+    function DayGridEventRenderer(dayGrid) {
+        var _this = _super.call(this, dayGrid.context) || this;
+        _this.dayGrid = dayGrid;
+        return _this;
+    }
+    // Renders the given foreground event segments onto the grid
+    DayGridEventRenderer.prototype.attachSegs = function (segs, mirrorInfo) {
+        var rowStructs = this.rowStructs = this.renderSegRows(segs);
+        // append to each row's content skeleton
+        this.dayGrid.rowEls.forEach(function (rowNode, i) {
+            rowNode.querySelector('.fc-content-skeleton > table').appendChild(rowStructs[i].tbodyEl);
+        });
+        // removes the "more.." events popover
+        if (!mirrorInfo) {
+            this.dayGrid.removeSegPopover();
+        }
+    };
+    // Unrenders all currently rendered foreground event segments
+    DayGridEventRenderer.prototype.detachSegs = function () {
+        var rowStructs = this.rowStructs || [];
+        var rowStruct;
+        while ((rowStruct = rowStructs.pop())) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["removeElement"])(rowStruct.tbodyEl);
+        }
+        this.rowStructs = null;
+    };
+    // Uses the given events array to generate <tbody> elements that should be appended to each row's content skeleton.
+    // Returns an array of rowStruct objects (see the bottom of `renderSegRow`).
+    // PRECONDITION: each segment shoud already have a rendered and assigned `.el`
+    DayGridEventRenderer.prototype.renderSegRows = function (segs) {
+        var rowStructs = [];
+        var segRows;
+        var row;
+        segRows = this.groupSegRows(segs); // group into nested arrays
+        // iterate each row of segment groupings
+        for (row = 0; row < segRows.length; row++) {
+            rowStructs.push(this.renderSegRow(row, segRows[row]));
+        }
+        return rowStructs;
+    };
+    // Given a row # and an array of segments all in the same row, render a <tbody> element, a skeleton that contains
+    // the segments. Returns object with a bunch of internal data about how the render was calculated.
+    // NOTE: modifies rowSegs
+    DayGridEventRenderer.prototype.renderSegRow = function (row, rowSegs) {
+        var dayGrid = this.dayGrid;
+        var colCnt = dayGrid.colCnt, isRtl = dayGrid.isRtl;
+        var segLevels = this.buildSegLevels(rowSegs); // group into sub-arrays of levels
+        var levelCnt = Math.max(1, segLevels.length); // ensure at least one level
+        var tbody = document.createElement('tbody');
+        var segMatrix = []; // lookup for which segments are rendered into which level+col cells
+        var cellMatrix = []; // lookup for all <td> elements of the level+col matrix
+        var loneCellMatrix = []; // lookup for <td> elements that only take up a single column
+        var i;
+        var levelSegs;
+        var col;
+        var tr;
+        var j;
+        var seg;
+        var td;
+        // populates empty cells from the current column (`col`) to `endCol`
+        function emptyCellsUntil(endCol) {
+            while (col < endCol) {
+                // try to grab a cell from the level above and extend its rowspan. otherwise, create a fresh cell
+                td = (loneCellMatrix[i - 1] || [])[col];
+                if (td) {
+                    td.rowSpan = (td.rowSpan || 1) + 1;
+                }
+                else {
+                    td = document.createElement('td');
+                    tr.appendChild(td);
+                }
+                cellMatrix[i][col] = td;
+                loneCellMatrix[i][col] = td;
+                col++;
+            }
+        }
+        for (i = 0; i < levelCnt; i++) { // iterate through all levels
+            levelSegs = segLevels[i];
+            col = 0;
+            tr = document.createElement('tr');
+            segMatrix.push([]);
+            cellMatrix.push([]);
+            loneCellMatrix.push([]);
+            // levelCnt might be 1 even though there are no actual levels. protect against this.
+            // this single empty row is useful for styling.
+            if (levelSegs) {
+                for (j = 0; j < levelSegs.length; j++) { // iterate through segments in level
+                    seg = levelSegs[j];
+                    var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
+                    var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
+                    emptyCellsUntil(leftCol);
+                    // create a container that occupies or more columns. append the event element.
+                    td = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createElement"])('td', { className: 'fc-event-container' }, seg.el);
+                    if (leftCol !== rightCol) {
+                        td.colSpan = rightCol - leftCol; //+ 1 Hiedra
+                    }
+                    else { // a single-column segment
+                        loneCellMatrix[i][col] = td;
+                    }
+                    while (col <= rightCol) {
+                        cellMatrix[i][col] = td;
+                        segMatrix[i][col] = seg;
+                        col++;
+                    }
+                    tr.appendChild(td);
+                }
+            }
+            emptyCellsUntil(colCnt); // finish off the row
+            var introHtml = dayGrid.renderProps.renderIntroHtml();
+            if (introHtml) {
+                if (dayGrid.isRtl) {
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["appendToElement"])(tr, introHtml);
+                }
+                else {
+                    Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["prependToElement"])(tr, introHtml);
+                }
+            }
+            tbody.appendChild(tr);
+        }
+        return {
+            row: row,
+            tbodyEl: tbody,
+            cellMatrix: cellMatrix,
+            segMatrix: segMatrix,
+            segLevels: segLevels,
+            segs: rowSegs
+        };
+    };
+    // Stacks a flat array of segments, which are all assumed to be in the same row, into subarrays of vertical levels.
+    // NOTE: modifies segs
+    DayGridEventRenderer.prototype.buildSegLevels = function (segs) {
+        var _a = this.dayGrid, isRtl = _a.isRtl, colCnt = _a.colCnt;
+        var levels = [];
+        var i;
+        var seg;
+        var j;
+        // Give preference to elements with certain criteria, so they have
+        // a chance to be closer to the top.
+        segs = this.sortEventSegs(segs);
+        for (i = 0; i < segs.length; i++) {
+            seg = segs[i];
+            // loop through levels, starting with the topmost, until the segment doesn't collide with other segments
+            for (j = 0; j < levels.length; j++) {
+                if (!isDaySegCollision(seg, levels[j])) {
+                    break;
+                }
+            }
+            // `j` now holds the desired subrow index
+            seg.level = j;
+            seg.leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol; // for sorting only
+            seg.rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol // for sorting only
+            ;
+            (levels[j] || (levels[j] = [])).push(seg);
+        }
+        // order segments left-to-right. very important if calendar is RTL
+        for (j = 0; j < levels.length; j++) {
+            levels[j].sort(compareDaySegCols);
+        }
+        return levels;
+    };
+    // Given a flat array of segments, return an array of sub-arrays, grouped by each segment's row
+    DayGridEventRenderer.prototype.groupSegRows = function (segs) {
+        var segRows = [];
+        var i;
+        for (i = 0; i < this.dayGrid.rowCnt; i++) {
+            segRows.push([]);
+        }
+        for (i = 0; i < segs.length; i++) {
+            segRows[segs[i].row].push(segs[i]);
+        }
+        return segRows;
+    };
+    // Computes a default `displayEventEnd` value if one is not expliclty defined
+    DayGridEventRenderer.prototype.computeDisplayEventEnd = function () {
+        return this.dayGrid.colCnt === 1; // we'll likely have space if there's only one day
+    };
+    return DayGridEventRenderer;
+}(_SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayGridEventRenderer);
+// Computes whether two segments' columns collide. They are assumed to be in the same row.
+function isDaySegCollision(seg, otherSegs) {
+    var i;
+    var otherSeg;
+    for (i = 0; i < otherSegs.length; i++) {
+        otherSeg = otherSegs[i];
+        if (otherSeg.firstCol <= seg.lastCol &&
+            otherSeg.lastCol >= seg.firstCol) {
+            return true;
+        }
+    }
+    return false;
+}
+// A cmp function for determining the leftmost event
+function compareDaySegCols(a, b) {
+    return a.leftCol - b.leftCol;
+}
+
 
 /***/ }),
 
@@ -167,7 +1486,102 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tsli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ \"moment\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\nvar EMPTY_CELL_HTML = '<td style=\"pointer-events:none\"></td>';\r\nvar DayGridFillRenderer = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGridFillRenderer, _super);\r\n    function DayGridFillRenderer(dayGrid) {\r\n        var _this = _super.call(this, dayGrid.context) || this;\r\n        _this.fillSegTag = 'td'; // override the default tag name\r\n        _this.dayGrid = dayGrid;\r\n        return _this;\r\n    }\r\n    DayGridFillRenderer.prototype.renderSegs = function (type, segs) {\r\n        // don't render timed background events\r\n        if (type === 'bgEvent') {\r\n            segs = segs.filter(function (seg) {\r\n                return seg.eventRange.def.allDay;\r\n            });\r\n        }\r\n        _super.prototype.renderSegs.call(this, type, segs);\r\n    };\r\n    DayGridFillRenderer.prototype.attachSegs = function (type, segs) {\r\n        var els = [];\r\n        var i;\r\n        var seg;\r\n        var skeletonEl;\r\n        for (i = 0; i < segs.length; i++) {\r\n            seg = segs[i];\r\n            skeletonEl = this.renderFillRow(type, seg);\r\n            this.dayGrid.rowEls[seg.row].appendChild(skeletonEl);\r\n            els.push(skeletonEl);\r\n        }\r\n        return els;\r\n    };\r\n    // Generates the HTML needed for one row of a fill. Requires the seg's el to be rendered.\r\n    DayGridFillRenderer.prototype.renderFillRow = function (type, seg) {\r\n        var dayGrid = this.dayGrid;\r\n        var colCnt = dayGrid.colCnt, isRtl = dayGrid.isRtl;\r\n        var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;\r\n        var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;\r\n        //Hiedra: skip invalid dates\r\n        if (!isRtl) { //TODO: isRtl\r\n            var aa = dayGrid.calendar.state.currentDate.getFullYear();\r\n            rightCol = Math.min(rightCol, moment__WEBPACK_IMPORTED_MODULE_2___default()(new Date(aa, seg.row, 1)).daysInMonth() - 1);\r\n        }\r\n        var startCol = leftCol;\r\n        var endCol = rightCol; // + 1 Hiedra\r\n        var className;\r\n        var skeletonEl;\r\n        var trEl;\r\n        if (type === 'businessHours') {\r\n            className = 'bgevent';\r\n        }\r\n        else {\r\n            className = type.toLowerCase();\r\n        }\r\n        skeletonEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"htmlToElement\"])('<div class=\"fc-' + className + '-skeleton\">' +\r\n            '<table><tr></tr></table>' +\r\n            '</div>');\r\n        trEl = skeletonEl.getElementsByTagName('tr')[0];\r\n        if (startCol > 0) {\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"appendToElement\"])(trEl, \r\n            // will create (startCol + 1) td's\r\n            new Array(startCol + 1).join(EMPTY_CELL_HTML));\r\n        }\r\n        seg.el.colSpan = endCol - startCol + 1; //hiedra (add +1)\r\n        trEl.appendChild(seg.el);\r\n        //if (endCol < colCnt) { //hiedra\r\n        if (endCol < colCnt - 1) {\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"appendToElement\"])(trEl, \r\n            // will create (colCnt - endCol) td's\r\n            //new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML)\r\n            new Array(colCnt - endCol).join(EMPTY_CELL_HTML) //hiedra\r\n            );\r\n        }\r\n        var introHtml = dayGrid.renderProps.renderIntroHtml();\r\n        if (introHtml) {\r\n            if (dayGrid.isRtl) {\r\n                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"appendToElement\"])(trEl, introHtml);\r\n            }\r\n            else {\r\n                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"prependToElement\"])(trEl, introHtml);\r\n            }\r\n        }\r\n        return skeletonEl;\r\n    };\r\n    return DayGridFillRenderer;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"FillRenderer\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayGridFillRenderer);\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayGridFillRenderer.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "moment");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var EMPTY_CELL_HTML = '<td style="pointer-events:none"></td>';
+var DayGridFillRenderer = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGridFillRenderer, _super);
+    function DayGridFillRenderer(dayGrid) {
+        var _this = _super.call(this, dayGrid.context) || this;
+        _this.fillSegTag = 'td'; // override the default tag name
+        _this.dayGrid = dayGrid;
+        return _this;
+    }
+    DayGridFillRenderer.prototype.renderSegs = function (type, segs) {
+        // don't render timed background events
+        if (type === 'bgEvent') {
+            segs = segs.filter(function (seg) {
+                return seg.eventRange.def.allDay;
+            });
+        }
+        _super.prototype.renderSegs.call(this, type, segs);
+    };
+    DayGridFillRenderer.prototype.attachSegs = function (type, segs) {
+        var els = [];
+        var i;
+        var seg;
+        var skeletonEl;
+        for (i = 0; i < segs.length; i++) {
+            seg = segs[i];
+            skeletonEl = this.renderFillRow(type, seg);
+            this.dayGrid.rowEls[seg.row].appendChild(skeletonEl);
+            els.push(skeletonEl);
+        }
+        return els;
+    };
+    // Generates the HTML needed for one row of a fill. Requires the seg's el to be rendered.
+    DayGridFillRenderer.prototype.renderFillRow = function (type, seg) {
+        var dayGrid = this.dayGrid;
+        var colCnt = dayGrid.colCnt, isRtl = dayGrid.isRtl;
+        var leftCol = isRtl ? (colCnt - 1 - seg.lastCol) : seg.firstCol;
+        var rightCol = isRtl ? (colCnt - 1 - seg.firstCol) : seg.lastCol;
+        //Hiedra: skip invalid dates
+        if (!isRtl) { //TODO: isRtl
+            var aa = dayGrid.calendar.state.currentDate.getFullYear();
+            rightCol = Math.min(rightCol, moment__WEBPACK_IMPORTED_MODULE_2___default()(new Date(aa, seg.row, 1)).daysInMonth() - 1);
+        }
+        var startCol = leftCol;
+        var endCol = rightCol; // + 1 Hiedra
+        var className;
+        var skeletonEl;
+        var trEl;
+        if (type === 'businessHours') {
+            className = 'bgevent';
+        }
+        else {
+            className = type.toLowerCase();
+        }
+        skeletonEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["htmlToElement"])('<div class="fc-' + className + '-skeleton">' +
+            '<table><tr></tr></table>' +
+            '</div>');
+        trEl = skeletonEl.getElementsByTagName('tr')[0];
+        if (startCol > 0) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["appendToElement"])(trEl, 
+            // will create (startCol + 1) td's
+            new Array(startCol + 1).join(EMPTY_CELL_HTML));
+        }
+        seg.el.colSpan = endCol - startCol + 1; //hiedra (add +1)
+        trEl.appendChild(seg.el);
+        //if (endCol < colCnt) { //hiedra
+        if (endCol < colCnt - 1) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["appendToElement"])(trEl, 
+            // will create (colCnt - endCol) td's
+            //new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML)
+            new Array(colCnt - endCol).join(EMPTY_CELL_HTML) //hiedra
+            );
+        }
+        var introHtml = dayGrid.renderProps.renderIntroHtml();
+        if (introHtml) {
+            if (dayGrid.isRtl) {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["appendToElement"])(trEl, introHtml);
+            }
+            else {
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["prependToElement"])(trEl, introHtml);
+            }
+        }
+        return skeletonEl;
+    };
+    return DayGridFillRenderer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["FillRenderer"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayGridFillRenderer);
+
 
 /***/ }),
 
@@ -179,7 +1593,48 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tsli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DayGridEventRenderer */ \"./src/DayGridEventRenderer.ts\");\n\r\n\r\n\r\nvar DayGridMirrorRenderer = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGridMirrorRenderer, _super);\r\n    function DayGridMirrorRenderer() {\r\n        return _super !== null && _super.apply(this, arguments) || this;\r\n    }\r\n    DayGridMirrorRenderer.prototype.attachSegs = function (segs, mirrorInfo) {\r\n        var sourceSeg = mirrorInfo.sourceSeg;\r\n        var rowStructs = this.rowStructs = this.renderSegRows(segs);\r\n        // inject each new event skeleton into each associated row\r\n        this.dayGrid.rowEls.forEach(function (rowNode, row) {\r\n            var skeletonEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"htmlToElement\"])('<div class=\"fc-mirror-skeleton\"><table></table></div>'); // will be absolutely positioned\r\n            var skeletonTopEl;\r\n            var skeletonTop;\r\n            // If there is an original segment, match the top position. Otherwise, put it at the row's top level\r\n            if (sourceSeg && sourceSeg.row === row) {\r\n                skeletonTopEl = sourceSeg.el;\r\n            }\r\n            else {\r\n                skeletonTopEl = rowNode.querySelector('.fc-content-skeleton tbody');\r\n                if (!skeletonTopEl) { // when no events\r\n                    skeletonTopEl = rowNode.querySelector('.fc-content-skeleton table');\r\n                }\r\n            }\r\n            skeletonTop = skeletonTopEl.getBoundingClientRect().top -\r\n                rowNode.getBoundingClientRect().top; // the offsetParent origin\r\n            skeletonEl.style.top = skeletonTop + 'px';\r\n            skeletonEl.querySelector('table').appendChild(rowStructs[row].tbodyEl);\r\n            rowNode.appendChild(skeletonEl);\r\n        });\r\n    };\r\n    return DayGridMirrorRenderer;\r\n}(_DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayGridMirrorRenderer);\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayGridMirrorRenderer.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DayGridEventRenderer */ "./src/DayGridEventRenderer.ts");
+
+
+
+var DayGridMirrorRenderer = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGridMirrorRenderer, _super);
+    function DayGridMirrorRenderer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DayGridMirrorRenderer.prototype.attachSegs = function (segs, mirrorInfo) {
+        var sourceSeg = mirrorInfo.sourceSeg;
+        var rowStructs = this.rowStructs = this.renderSegRows(segs);
+        // inject each new event skeleton into each associated row
+        this.dayGrid.rowEls.forEach(function (rowNode, row) {
+            var skeletonEl = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["htmlToElement"])('<div class="fc-mirror-skeleton"><table></table></div>'); // will be absolutely positioned
+            var skeletonTopEl;
+            var skeletonTop;
+            // If there is an original segment, match the top position. Otherwise, put it at the row's top level
+            if (sourceSeg && sourceSeg.row === row) {
+                skeletonTopEl = sourceSeg.el;
+            }
+            else {
+                skeletonTopEl = rowNode.querySelector('.fc-content-skeleton tbody');
+                if (!skeletonTopEl) { // when no events
+                    skeletonTopEl = rowNode.querySelector('.fc-content-skeleton table');
+                }
+            }
+            skeletonTop = skeletonTopEl.getBoundingClientRect().top -
+                rowNode.getBoundingClientRect().top; // the offsetParent origin
+            skeletonEl.style.top = skeletonTop + 'px';
+            skeletonEl.querySelector('table').appendChild(rowStructs[row].tbodyEl);
+            rowNode.appendChild(skeletonEl);
+        });
+    };
+    return DayGridMirrorRenderer;
+}(_DayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayGridMirrorRenderer);
+
 
 /***/ }),
 
@@ -191,7 +1646,77 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tsli
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"buildDayTable\", function() { return buildDayTable; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _AbstractDayGridView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AbstractDayGridView */ \"./src/AbstractDayGridView.ts\");\n/* harmony import */ var _SimpleDayGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SimpleDayGrid */ \"./src/SimpleDayGrid.ts\");\n/* harmony import */ var _DayTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DayTable */ \"./src/DayTable.ts\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ \"moment\");\n/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n //Hiedra\r\nvar DayGridView = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGridView, _super);\r\n    function DayGridView(_context, viewSpec, dateProfileGenerator, parentEl) {\r\n        var _this = _super.call(this, _context, viewSpec, dateProfileGenerator, parentEl) || this;\r\n        _this.buildDayTable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoize\"])(buildDayTable);\r\n        //set moment locale\r\n        Object(moment__WEBPACK_IMPORTED_MODULE_5__[\"locale\"])(_this.context.dateEnv.locale.codeArg.toString()); //Hiedra\r\n        if (_this.opt('columnHeader')) {\r\n            _this.header = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"DayHeader\"](_this.context, _this.el.querySelector('.fc-head-container'));\r\n        }\r\n        _this.simpleDayGrid = new _SimpleDayGrid__WEBPACK_IMPORTED_MODULE_3__[\"default\"](_this.context, _this.dayGrid);\r\n        return _this;\r\n    }\r\n    DayGridView.prototype.destroy = function () {\r\n        _super.prototype.destroy.call(this);\r\n        if (this.header) {\r\n            this.header.destroy();\r\n        }\r\n        this.simpleDayGrid.destroy();\r\n    };\r\n    DayGridView.prototype.render = function (props) {\r\n        _super.prototype.render.call(this, props);\r\n        var dateProfile = this.props.dateProfile;\r\n        var dayTable = this.dayTable =\r\n            this.buildDayTable(dateProfile, this.dateProfileGenerator);\r\n        if (this.header) {\r\n            this.header.receiveProps({\r\n                dateProfile: dateProfile,\r\n                dates: dayTable.headerDates,\r\n                datesRepDistinctDays: dayTable.rowCnt === 1,\r\n                renderIntroHtml: this.renderHeadIntroHtml\r\n            });\r\n        }\r\n        this.simpleDayGrid.receiveProps({\r\n            dateProfile: dateProfile,\r\n            dayTable: dayTable,\r\n            businessHours: props.businessHours,\r\n            dateSelection: props.dateSelection,\r\n            eventStore: props.eventStore,\r\n            eventUiBases: props.eventUiBases,\r\n            eventSelection: props.eventSelection,\r\n            eventDrag: props.eventDrag,\r\n            eventResize: props.eventResize,\r\n            isRigid: this.hasRigidRows(),\r\n            nextDayThreshold: this.nextDayThreshold\r\n        });\r\n    };\r\n    return DayGridView;\r\n}(_AbstractDayGridView__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayGridView);\r\nfunction buildDayTable(dateProfile, dateProfileGenerator) {\r\n    var daySeries = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"DaySeries\"](dateProfile.renderRange, dateProfileGenerator);\r\n    return new _DayTable__WEBPACK_IMPORTED_MODULE_4__[\"default\"](daySeries, /year|month|week/.test(dateProfile.currentRangeUnit));\r\n}\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayGridView.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "buildDayTable", function() { return buildDayTable; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _AbstractDayGridView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AbstractDayGridView */ "./src/AbstractDayGridView.ts");
+/* harmony import */ var _SimpleDayGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SimpleDayGrid */ "./src/SimpleDayGrid.ts");
+/* harmony import */ var _DayTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DayTable */ "./src/DayTable.ts");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "moment");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+ //Hiedra
+var DayGridView = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGridView, _super);
+    function DayGridView(_context, viewSpec, dateProfileGenerator, parentEl) {
+        var _this = _super.call(this, _context, viewSpec, dateProfileGenerator, parentEl) || this;
+        _this.buildDayTable = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoize"])(buildDayTable);
+        //set moment locale
+        Object(moment__WEBPACK_IMPORTED_MODULE_5__["locale"])(_this.context.dateEnv.locale.codeArg.toString()); //Hiedra
+        if (_this.opt('columnHeader')) {
+            _this.header = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DayHeader"](_this.context, _this.el.querySelector('.fc-head-container'));
+        }
+        _this.simpleDayGrid = new _SimpleDayGrid__WEBPACK_IMPORTED_MODULE_3__["default"](_this.context, _this.dayGrid);
+        return _this;
+    }
+    DayGridView.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        if (this.header) {
+            this.header.destroy();
+        }
+        this.simpleDayGrid.destroy();
+    };
+    DayGridView.prototype.render = function (props) {
+        _super.prototype.render.call(this, props);
+        var dateProfile = this.props.dateProfile;
+        var dayTable = this.dayTable =
+            this.buildDayTable(dateProfile, this.dateProfileGenerator);
+        if (this.header) {
+            this.header.receiveProps({
+                dateProfile: dateProfile,
+                dates: dayTable.headerDates,
+                datesRepDistinctDays: dayTable.rowCnt === 1,
+                renderIntroHtml: this.renderHeadIntroHtml
+            });
+        }
+        this.simpleDayGrid.receiveProps({
+            dateProfile: dateProfile,
+            dayTable: dayTable,
+            businessHours: props.businessHours,
+            dateSelection: props.dateSelection,
+            eventStore: props.eventStore,
+            eventUiBases: props.eventUiBases,
+            eventSelection: props.eventSelection,
+            eventDrag: props.eventDrag,
+            eventResize: props.eventResize,
+            isRigid: this.hasRigidRows(),
+            nextDayThreshold: this.nextDayThreshold
+        });
+    };
+    return DayGridView;
+}(_AbstractDayGridView__WEBPACK_IMPORTED_MODULE_2__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayGridView);
+function buildDayTable(dateProfile, dateProfileGenerator) {
+    var daySeries = new _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DaySeries"](dateProfile.renderRange, dateProfileGenerator);
+    return new _DayTable__WEBPACK_IMPORTED_MODULE_4__["default"](daySeries, /year|month|week/.test(dateProfile.currentRangeUnit));
+}
+
 
 /***/ }),
 
@@ -203,7 +1728,101 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar DayTable = /** @class */ (function () {\r\n    function DayTable(daySeries, breakOnWeeks) {\r\n        this.rowCnt = 12;\r\n        this.colCnt = 31;\r\n        this.daySeries = daySeries;\r\n        this.cells = this.buildCells();\r\n        this.headerDates = this.buildHeaderDates();\r\n    }\r\n    DayTable.prototype.buildCells = function () {\r\n        var rows = [];\r\n        var cells = [];\r\n        var inrows = [];\r\n        var inrow;\r\n        var tinvalid = 0;\r\n        for (var i = 0; i < this.daySeries.dates.length; i++) {\r\n            cells.push({ date: this.daySeries.dates[i] });\r\n            if (this.daySeries.dates.length === (i + 1) || this.daySeries.dates[i + 1].getDate() === 1) {\r\n                inrow = { idxini: -1, idxfin: -1 };\r\n                for (var padding = this.daySeries.dates[i].getDate(); padding < 31; padding++) {\r\n                    cells.push({\r\n                        date: null\r\n                    });\r\n                    if (inrow.idxini == -1) {\r\n                        inrow.idxini = tinvalid + i + 1;\r\n                        inrow.idxfin = tinvalid + i + 1;\r\n                    }\r\n                    else {\r\n                        inrow.idxfin = inrow.idxfin + 1;\r\n                    }\r\n                    tinvalid++;\r\n                }\r\n                if (inrow.idxini != -1)\r\n                    inrows.push(inrow);\r\n                rows.push(cells);\r\n                cells = [];\r\n            }\r\n        }\r\n        this.invalidIndex = inrows;\r\n        return rows;\r\n    };\r\n    DayTable.prototype.buildHeaderDates = function () {\r\n        return [];\r\n    };\r\n    DayTable.prototype.sliceRange = function (range) {\r\n        var colCnt = this.colCnt;\r\n        var seriesSeg = this.daySeries.sliceRange(range);\r\n        var segs = [];\r\n        if (seriesSeg) {\r\n            var firstIndex = seriesSeg.firstIndex, lastIndex = seriesSeg.lastIndex;\r\n            //Hiedra: skip invalid dates                \r\n            for (var r = 0; r < this.invalidIndex.length; r++) {\r\n                if (this.invalidIndex[r].idxini != -1) {\r\n                    var value = 0;\r\n                    if (firstIndex >= this.invalidIndex[r].idxini) {\r\n                        if (firstIndex >= this.invalidIndex[r].idxfin)\r\n                            value = this.invalidIndex[r].idxfin - this.invalidIndex[r].idxini + 1;\r\n                        else\r\n                            value = firstIndex - this.invalidIndex[r].idxini + 1;\r\n                        firstIndex += value;\r\n                        lastIndex += value;\r\n                    }\r\n                    else if (lastIndex >= this.invalidIndex[r].idxini) {\r\n                        if (lastIndex >= this.invalidIndex[r].idxfin)\r\n                            value = this.invalidIndex[r].idxfin - this.invalidIndex[r].idxini + 1;\r\n                        else\r\n                            value = firstIndex - this.invalidIndex[r].idxini + 1;\r\n                        lastIndex += value;\r\n                    }\r\n                    else {\r\n                        break;\r\n                    }\r\n                }\r\n            }\r\n            var index = firstIndex;\r\n            while (index <= lastIndex) {\r\n                var row = Math.floor(index / colCnt);\r\n                var nextIndex = Math.min((row + 1) * colCnt, lastIndex + 1);\r\n                //invalid date?\r\n                segs.push({\r\n                    row: row,\r\n                    firstCol: index % colCnt,\r\n                    lastCol: (nextIndex - 1) % colCnt,\r\n                    isStart: seriesSeg.isStart && index === firstIndex,\r\n                    isEnd: seriesSeg.isEnd && (nextIndex - 1) === lastIndex\r\n                });\r\n                index = nextIndex;\r\n            }\r\n        }\r\n        return segs;\r\n    };\r\n    return DayTable;\r\n}());\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayTable);\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayTable.ts");
+__webpack_require__.r(__webpack_exports__);
+var DayTable = /** @class */ (function () {
+    function DayTable(daySeries, breakOnWeeks) {
+        this.rowCnt = 12;
+        this.colCnt = 31;
+        this.daySeries = daySeries;
+        this.cells = this.buildCells();
+        this.headerDates = this.buildHeaderDates();
+    }
+    DayTable.prototype.buildCells = function () {
+        var rows = [];
+        var cells = [];
+        var inrows = [];
+        var inrow;
+        var tinvalid = 0;
+        for (var i = 0; i < this.daySeries.dates.length; i++) {
+            cells.push({ date: this.daySeries.dates[i] });
+            if (this.daySeries.dates.length === (i + 1) || this.daySeries.dates[i + 1].getDate() === 1) {
+                inrow = { idxini: -1, idxfin: -1 };
+                for (var padding = this.daySeries.dates[i].getDate(); padding < 31; padding++) {
+                    cells.push({
+                        date: null
+                    });
+                    if (inrow.idxini == -1) {
+                        inrow.idxini = tinvalid + i + 1;
+                        inrow.idxfin = tinvalid + i + 1;
+                    }
+                    else {
+                        inrow.idxfin = inrow.idxfin + 1;
+                    }
+                    tinvalid++;
+                }
+                if (inrow.idxini != -1)
+                    inrows.push(inrow);
+                rows.push(cells);
+                cells = [];
+            }
+        }
+        this.invalidIndex = inrows;
+        return rows;
+    };
+    DayTable.prototype.buildHeaderDates = function () {
+        return [];
+    };
+    DayTable.prototype.sliceRange = function (range) {
+        var colCnt = this.colCnt;
+        var seriesSeg = this.daySeries.sliceRange(range);
+        var segs = [];
+        if (seriesSeg) {
+            var firstIndex = seriesSeg.firstIndex, lastIndex = seriesSeg.lastIndex;
+            //Hiedra: skip invalid dates                
+            for (var r = 0; r < this.invalidIndex.length; r++) {
+                if (this.invalidIndex[r].idxini != -1) {
+                    var value = 0;
+                    if (firstIndex >= this.invalidIndex[r].idxini) {
+                        if (firstIndex >= this.invalidIndex[r].idxfin)
+                            value = this.invalidIndex[r].idxfin - this.invalidIndex[r].idxini + 1;
+                        else
+                            value = firstIndex - this.invalidIndex[r].idxini + 1;
+                        firstIndex += value;
+                        lastIndex += value;
+                    }
+                    else if (lastIndex >= this.invalidIndex[r].idxini) {
+                        if (lastIndex >= this.invalidIndex[r].idxfin)
+                            value = this.invalidIndex[r].idxfin - this.invalidIndex[r].idxini + 1;
+                        else
+                            value = firstIndex - this.invalidIndex[r].idxini + 1;
+                        lastIndex += value;
+                    }
+                    else {
+                        break;
+                    }
+                }
+            }
+            var index = firstIndex;
+            while (index <= lastIndex) {
+                var row = Math.floor(index / colCnt);
+                var nextIndex = Math.min((row + 1) * colCnt, lastIndex + 1);
+                //invalid date?
+                segs.push({
+                    row: row,
+                    firstCol: index % colCnt,
+                    lastCol: (nextIndex - 1) % colCnt,
+                    isStart: seriesSeg.isStart && index === firstIndex,
+                    isEnd: seriesSeg.isEnd && (nextIndex - 1) === lastIndex
+                });
+                index = nextIndex;
+            }
+        }
+        return segs;
+    };
+    return DayTable;
+}());
+/* harmony default export */ __webpack_exports__["default"] = (DayTable);
+
 
 /***/ }),
 
@@ -215,7 +1834,105 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar DayTable = /** @class */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DayTileEventRenderer\", function() { return DayTileEventRenderer; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SimpleDayGridEventRenderer */ \"./src/SimpleDayGridEventRenderer.ts\");\n\r\n\r\n\r\nvar DayTile = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayTile, _super);\r\n    function DayTile(context, el) {\r\n        var _this = _super.call(this, context, el) || this;\r\n        var eventRenderer = _this.eventRenderer = new DayTileEventRenderer(_this);\r\n        var renderFrame = _this.renderFrame = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(_this._renderFrame);\r\n        _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderFrame]);\r\n        _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);\r\n        _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);\r\n        _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"memoizeRendering\"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);\r\n        context.calendar.registerInteractiveComponent(_this, {\r\n            el: _this.el,\r\n            useEventCenter: false\r\n        });\r\n        return _this;\r\n    }\r\n    DayTile.prototype.render = function (props) {\r\n        this.renderFrame(props.date);\r\n        this.renderFgEvents(props.fgSegs);\r\n        this.renderEventSelection(props.eventSelection);\r\n        this.renderEventDrag(props.eventDragInstances);\r\n        this.renderEventResize(props.eventResizeInstances);\r\n    };\r\n    DayTile.prototype.destroy = function () {\r\n        _super.prototype.destroy.call(this);\r\n        this.renderFrame.unrender(); // should unrender everything else\r\n        this.calendar.unregisterInteractiveComponent(this);\r\n    };\r\n    DayTile.prototype._renderFrame = function (date) {\r\n        var _a = this, theme = _a.theme, dateEnv = _a.dateEnv;\r\n        var title = dateEnv.format(date, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createFormatter\"])(this.opt('dayPopoverFormat')) // TODO: cache\r\n        );\r\n        this.el.innerHTML =\r\n            '<div class=\"fc-header ' + theme.getClass('popoverHeader') + '\">' +\r\n                '<span class=\"fc-title\">' +\r\n                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"htmlEscape\"])(title) +\r\n                '</span>' +\r\n                '<span class=\"fc-close ' + theme.getIconClass('close') + '\"></span>' +\r\n                '</div>' +\r\n                '<div class=\"fc-body ' + theme.getClass('popoverContent') + '\">' +\r\n                '<div class=\"fc-event-container\"></div>' +\r\n                '</div>';\r\n        this.segContainerEl = this.el.querySelector('.fc-event-container');\r\n    };\r\n    DayTile.prototype.queryHit = function (positionLeft, positionTop, elWidth, elHeight) {\r\n        var date = this.props.date; // HACK\r\n        if (positionLeft < elWidth && positionTop < elHeight) {\r\n            return {\r\n                component: this,\r\n                dateSpan: {\r\n                    allDay: true,\r\n                    range: { start: date, end: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"addDays\"])(date, 1) }\r\n                },\r\n                dayEl: this.el,\r\n                rect: {\r\n                    left: 0,\r\n                    top: 0,\r\n                    right: elWidth,\r\n                    bottom: elHeight\r\n                },\r\n                layer: 1\r\n            };\r\n        }\r\n    };\r\n    return DayTile;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"DateComponent\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (DayTile);\r\nvar DayTileEventRenderer = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayTileEventRenderer, _super);\r\n    function DayTileEventRenderer(dayTile) {\r\n        var _this = _super.call(this, dayTile.context) || this;\r\n        _this.dayTile = dayTile;\r\n        return _this;\r\n    }\r\n    DayTileEventRenderer.prototype.attachSegs = function (segs) {\r\n        for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {\r\n            var seg = segs_1[_i];\r\n            this.dayTile.segContainerEl.appendChild(seg.el);\r\n        }\r\n    };\r\n    DayTileEventRenderer.prototype.detachSegs = function (segs) {\r\n        for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {\r\n            var seg = segs_2[_i];\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"removeElement\"])(seg.el);\r\n        }\r\n    };\r\n    return DayTileEventRenderer;\r\n}(_SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\r\n\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\DayTile.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayTileEventRenderer", function() { return DayTileEventRenderer; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SimpleDayGridEventRenderer */ "./src/SimpleDayGridEventRenderer.ts");
+
+
+
+var DayTile = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayTile, _super);
+    function DayTile(context, el) {
+        var _this = _super.call(this, context, el) || this;
+        var eventRenderer = _this.eventRenderer = new DayTileEventRenderer(_this);
+        var renderFrame = _this.renderFrame = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(_this._renderFrame);
+        _this.renderFgEvents = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(eventRenderer.renderSegs.bind(eventRenderer), eventRenderer.unrender.bind(eventRenderer), [renderFrame]);
+        _this.renderEventSelection = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(eventRenderer.selectByInstanceId.bind(eventRenderer), eventRenderer.unselectByInstanceId.bind(eventRenderer), [_this.renderFgEvents]);
+        _this.renderEventDrag = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);
+        _this.renderEventResize = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["memoizeRendering"])(eventRenderer.hideByHash.bind(eventRenderer), eventRenderer.showByHash.bind(eventRenderer), [renderFrame]);
+        context.calendar.registerInteractiveComponent(_this, {
+            el: _this.el,
+            useEventCenter: false
+        });
+        return _this;
+    }
+    DayTile.prototype.render = function (props) {
+        this.renderFrame(props.date);
+        this.renderFgEvents(props.fgSegs);
+        this.renderEventSelection(props.eventSelection);
+        this.renderEventDrag(props.eventDragInstances);
+        this.renderEventResize(props.eventResizeInstances);
+    };
+    DayTile.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.renderFrame.unrender(); // should unrender everything else
+        this.calendar.unregisterInteractiveComponent(this);
+    };
+    DayTile.prototype._renderFrame = function (date) {
+        var _a = this, theme = _a.theme, dateEnv = _a.dateEnv;
+        var title = dateEnv.format(date, Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createFormatter"])(this.opt('dayPopoverFormat')) // TODO: cache
+        );
+        this.el.innerHTML =
+            '<div class="fc-header ' + theme.getClass('popoverHeader') + '">' +
+                '<span class="fc-title">' +
+                Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["htmlEscape"])(title) +
+                '</span>' +
+                '<span class="fc-close ' + theme.getIconClass('close') + '"></span>' +
+                '</div>' +
+                '<div class="fc-body ' + theme.getClass('popoverContent') + '">' +
+                '<div class="fc-event-container"></div>' +
+                '</div>';
+        this.segContainerEl = this.el.querySelector('.fc-event-container');
+    };
+    DayTile.prototype.queryHit = function (positionLeft, positionTop, elWidth, elHeight) {
+        var date = this.props.date; // HACK
+        if (positionLeft < elWidth && positionTop < elHeight) {
+            return {
+                component: this,
+                dateSpan: {
+                    allDay: true,
+                    range: { start: date, end: Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["addDays"])(date, 1) }
+                },
+                dayEl: this.el,
+                rect: {
+                    left: 0,
+                    top: 0,
+                    right: elWidth,
+                    bottom: elHeight
+                },
+                layer: 1
+            };
+        }
+    };
+    return DayTile;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+/* harmony default export */ __webpack_exports__["default"] = (DayTile);
+var DayTileEventRenderer = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayTileEventRenderer, _super);
+    function DayTileEventRenderer(dayTile) {
+        var _this = _super.call(this, dayTile.context) || this;
+        _this.dayTile = dayTile;
+        return _this;
+    }
+    DayTileEventRenderer.prototype.attachSegs = function (segs) {
+        for (var _i = 0, segs_1 = segs; _i < segs_1.length; _i++) {
+            var seg = segs_1[_i];
+            this.dayTile.segContainerEl.appendChild(seg.el);
+        }
+    };
+    DayTileEventRenderer.prototype.detachSegs = function (segs) {
+        for (var _i = 0, segs_2 = segs; _i < segs_2.length; _i++) {
+            var seg = segs_2[_i];
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["removeElement"])(seg.el);
+        }
+    };
+    return DayTileEventRenderer;
+}(_SimpleDayGridEventRenderer__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+
 
 /***/ }),
 
@@ -227,7 +1944,132 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__);\n/* A rectangular panel that is absolutely positioned over other content\r\n------------------------------------------------------------------------------------------------------------------------\r\nOptions:\r\n  - className (string)\r\n  - content (HTML string, element, or element array)\r\n  - parentEl\r\n  - top\r\n  - left\r\n  - right (the x coord of where the right edge should be. not a \"CSS\" right)\r\n  - autoHide (boolean)\r\n  - show (callback)\r\n  - hide (callback)\r\n*/\r\n\r\nvar Popover = /** @class */ (function () {\r\n    function Popover(options) {\r\n        var _this = this;\r\n        this.isHidden = true;\r\n        this.margin = 10; // the space required between the popover and the edges of the scroll container\r\n        // Triggered when the user clicks *anywhere* in the document, for the autoHide feature\r\n        this.documentMousedown = function (ev) {\r\n            // only hide the popover if the click happened outside the popover\r\n            if (_this.el && !_this.el.contains(ev.target)) {\r\n                _this.hide();\r\n            }\r\n        };\r\n        this.options = options;\r\n    }\r\n    // Shows the popover on the specified position. Renders it if not already\r\n    Popover.prototype.show = function () {\r\n        if (this.isHidden) {\r\n            if (!this.el) {\r\n                this.render();\r\n            }\r\n            this.el.style.display = '';\r\n            this.position();\r\n            this.isHidden = false;\r\n            this.trigger('show');\r\n        }\r\n    };\r\n    // Hides the popover, through CSS, but does not remove it from the DOM\r\n    Popover.prototype.hide = function () {\r\n        if (!this.isHidden) {\r\n            this.el.style.display = 'none';\r\n            this.isHidden = true;\r\n            this.trigger('hide');\r\n        }\r\n    };\r\n    // Creates `this.el` and renders content inside of it\r\n    Popover.prototype.render = function () {\r\n        var _this = this;\r\n        var options = this.options;\r\n        var el = this.el = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"])('div', {\r\n            className: 'fc-popover ' + (options.className || ''),\r\n            style: {\r\n                top: '0',\r\n                left: '0'\r\n            }\r\n        });\r\n        if (typeof options.content === 'function') {\r\n            options.content(el);\r\n        }\r\n        options.parentEl.appendChild(el);\r\n        // when a click happens on anything inside with a 'fc-close' className, hide the popover\r\n        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"listenBySelector\"])(el, 'click', '.fc-close', function (ev) {\r\n            _this.hide();\r\n        });\r\n        if (options.autoHide) {\r\n            document.addEventListener('mousedown', this.documentMousedown);\r\n        }\r\n    };\r\n    // Hides and unregisters any handlers\r\n    Popover.prototype.destroy = function () {\r\n        this.hide();\r\n        if (this.el) {\r\n            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"removeElement\"])(this.el);\r\n            this.el = null;\r\n        }\r\n        document.removeEventListener('mousedown', this.documentMousedown);\r\n    };\r\n    // Positions the popover optimally, using the top/left/right options\r\n    Popover.prototype.position = function () {\r\n        var options = this.options;\r\n        var el = this.el;\r\n        var elDims = el.getBoundingClientRect(); // only used for width,height\r\n        var origin = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"computeRect\"])(el.offsetParent);\r\n        var clippingRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"computeClippingRect\"])(options.parentEl);\r\n        var top; // the \"position\" (not \"offset\") values for the popover\r\n        var left; //\r\n        // compute top and left\r\n        top = options.top || 0;\r\n        if (options.left !== undefined) {\r\n            left = options.left;\r\n        }\r\n        else if (options.right !== undefined) {\r\n            left = options.right - elDims.width; // derive the left value from the right value\r\n        }\r\n        else {\r\n            left = 0;\r\n        }\r\n        // constrain to the view port. if constrained by two edges, give precedence to top/left\r\n        top = Math.min(top, clippingRect.bottom - elDims.height - this.margin);\r\n        top = Math.max(top, clippingRect.top + this.margin);\r\n        left = Math.min(left, clippingRect.right - elDims.width - this.margin);\r\n        left = Math.max(left, clippingRect.left + this.margin);\r\n        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__[\"applyStyle\"])(el, {\r\n            top: top - origin.top,\r\n            left: left - origin.left\r\n        });\r\n    };\r\n    // Triggers a callback. Calls a function in the option hash of the same name.\r\n    // Arguments beyond the first `name` are forwarded on.\r\n    // TODO: better code reuse for this. Repeat code\r\n    // can kill this???\r\n    Popover.prototype.trigger = function (name) {\r\n        if (this.options[name]) {\r\n            this.options[name].apply(this, Array.prototype.slice.call(arguments, 1));\r\n        }\r\n    };\r\n    return Popover;\r\n}());\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Popover);\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\Popover.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__);
+/* A rectangular panel that is absolutely positioned over other content
+------------------------------------------------------------------------------------------------------------------------
+Options:
+  - className (string)
+  - content (HTML string, element, or element array)
+  - parentEl
+  - top
+  - left
+  - right (the x coord of where the right edge should be. not a "CSS" right)
+  - autoHide (boolean)
+  - show (callback)
+  - hide (callback)
+*/
+
+var Popover = /** @class */ (function () {
+    function Popover(options) {
+        var _this = this;
+        this.isHidden = true;
+        this.margin = 10; // the space required between the popover and the edges of the scroll container
+        // Triggered when the user clicks *anywhere* in the document, for the autoHide feature
+        this.documentMousedown = function (ev) {
+            // only hide the popover if the click happened outside the popover
+            if (_this.el && !_this.el.contains(ev.target)) {
+                _this.hide();
+            }
+        };
+        this.options = options;
+    }
+    // Shows the popover on the specified position. Renders it if not already
+    Popover.prototype.show = function () {
+        if (this.isHidden) {
+            if (!this.el) {
+                this.render();
+            }
+            this.el.style.display = '';
+            this.position();
+            this.isHidden = false;
+            this.trigger('show');
+        }
+    };
+    // Hides the popover, through CSS, but does not remove it from the DOM
+    Popover.prototype.hide = function () {
+        if (!this.isHidden) {
+            this.el.style.display = 'none';
+            this.isHidden = true;
+            this.trigger('hide');
+        }
+    };
+    // Creates `this.el` and renders content inside of it
+    Popover.prototype.render = function () {
+        var _this = this;
+        var options = this.options;
+        var el = this.el = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["createElement"])('div', {
+            className: 'fc-popover ' + (options.className || ''),
+            style: {
+                top: '0',
+                left: '0'
+            }
+        });
+        if (typeof options.content === 'function') {
+            options.content(el);
+        }
+        options.parentEl.appendChild(el);
+        // when a click happens on anything inside with a 'fc-close' className, hide the popover
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["listenBySelector"])(el, 'click', '.fc-close', function (ev) {
+            _this.hide();
+        });
+        if (options.autoHide) {
+            document.addEventListener('mousedown', this.documentMousedown);
+        }
+    };
+    // Hides and unregisters any handlers
+    Popover.prototype.destroy = function () {
+        this.hide();
+        if (this.el) {
+            Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["removeElement"])(this.el);
+            this.el = null;
+        }
+        document.removeEventListener('mousedown', this.documentMousedown);
+    };
+    // Positions the popover optimally, using the top/left/right options
+    Popover.prototype.position = function () {
+        var options = this.options;
+        var el = this.el;
+        var elDims = el.getBoundingClientRect(); // only used for width,height
+        var origin = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeRect"])(el.offsetParent);
+        var clippingRect = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["computeClippingRect"])(options.parentEl);
+        var top; // the "position" (not "offset") values for the popover
+        var left; //
+        // compute top and left
+        top = options.top || 0;
+        if (options.left !== undefined) {
+            left = options.left;
+        }
+        else if (options.right !== undefined) {
+            left = options.right - elDims.width; // derive the left value from the right value
+        }
+        else {
+            left = 0;
+        }
+        // constrain to the view port. if constrained by two edges, give precedence to top/left
+        top = Math.min(top, clippingRect.bottom - elDims.height - this.margin);
+        top = Math.max(top, clippingRect.top + this.margin);
+        left = Math.min(left, clippingRect.right - elDims.width - this.margin);
+        left = Math.max(left, clippingRect.left + this.margin);
+        Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_0__["applyStyle"])(el, {
+            top: top - origin.top,
+            left: left - origin.left
+        });
+    };
+    // Triggers a callback. Calls a function in the option hash of the same name.
+    // Arguments beyond the first `name` are forwarded on.
+    // TODO: better code reuse for this. Repeat code
+    // can kill this???
+    Popover.prototype.trigger = function (name) {
+        if (this.options[name]) {
+            this.options[name].apply(this, Array.prototype.slice.call(arguments, 1));
+        }
+    };
+    return Popover;
+}());
+/* harmony default export */ __webpack_exports__["default"] = (Popover);
+
 
 /***/ }),
 
@@ -239,7 +2081,66 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ful
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DayGridSlicer\", function() { return DayGridSlicer; });\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\nvar SimpleDayGrid = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(SimpleDayGrid, _super);\r\n    function SimpleDayGrid(context, dayGrid) {\r\n        var _this = _super.call(this, context, dayGrid.el) || this;\r\n        _this.slicer = new DayGridSlicer();\r\n        _this.dayGrid = dayGrid;\r\n        context.calendar.registerInteractiveComponent(_this, { el: _this.dayGrid.el });\r\n        return _this;\r\n    }\r\n    SimpleDayGrid.prototype.destroy = function () {\r\n        _super.prototype.destroy.call(this);\r\n        this.calendar.unregisterInteractiveComponent(this);\r\n    };\r\n    SimpleDayGrid.prototype.render = function (props) {\r\n        var dayGrid = this.dayGrid;\r\n        var dateProfile = props.dateProfile, dayTable = props.dayTable;\r\n        dayGrid.receiveProps(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__assign\"])({}, this.slicer.sliceProps(props, dateProfile, props.nextDayThreshold, dayGrid, dayTable)), { dateProfile: dateProfile, cells: dayTable.cells, isRigid: props.isRigid }));\r\n    };\r\n    SimpleDayGrid.prototype.buildPositionCaches = function () {\r\n        this.dayGrid.buildPositionCaches();\r\n    };\r\n    SimpleDayGrid.prototype.queryHit = function (positionLeft, positionTop) {\r\n        var rawHit = this.dayGrid.positionToHit(positionLeft, positionTop);\r\n        if (rawHit) {\r\n            return {\r\n                component: this.dayGrid,\r\n                dateSpan: rawHit.dateSpan,\r\n                dayEl: rawHit.dayEl,\r\n                rect: {\r\n                    left: rawHit.relativeRect.left,\r\n                    right: rawHit.relativeRect.right,\r\n                    top: rawHit.relativeRect.top,\r\n                    bottom: rawHit.relativeRect.bottom\r\n                },\r\n                layer: 0\r\n            };\r\n        }\r\n    };\r\n    return SimpleDayGrid;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"DateComponent\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (SimpleDayGrid);\r\nvar DayGridSlicer = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(DayGridSlicer, _super);\r\n    function DayGridSlicer() {\r\n        return _super !== null && _super.apply(this, arguments) || this;\r\n    }\r\n    DayGridSlicer.prototype.sliceRange = function (dateRange, dayTable) {\r\n        return dayTable.sliceRange(dateRange);\r\n    };\r\n    return DayGridSlicer;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"Slicer\"]));\r\n\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\SimpleDayGrid.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DayGridSlicer", function() { return DayGridSlicer; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var SimpleDayGrid = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(SimpleDayGrid, _super);
+    function SimpleDayGrid(context, dayGrid) {
+        var _this = _super.call(this, context, dayGrid.el) || this;
+        _this.slicer = new DayGridSlicer();
+        _this.dayGrid = dayGrid;
+        context.calendar.registerInteractiveComponent(_this, { el: _this.dayGrid.el });
+        return _this;
+    }
+    SimpleDayGrid.prototype.destroy = function () {
+        _super.prototype.destroy.call(this);
+        this.calendar.unregisterInteractiveComponent(this);
+    };
+    SimpleDayGrid.prototype.render = function (props) {
+        var dayGrid = this.dayGrid;
+        var dateProfile = props.dateProfile, dayTable = props.dayTable;
+        dayGrid.receiveProps(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.slicer.sliceProps(props, dateProfile, props.nextDayThreshold, dayGrid, dayTable)), { dateProfile: dateProfile, cells: dayTable.cells, isRigid: props.isRigid }));
+    };
+    SimpleDayGrid.prototype.buildPositionCaches = function () {
+        this.dayGrid.buildPositionCaches();
+    };
+    SimpleDayGrid.prototype.queryHit = function (positionLeft, positionTop) {
+        var rawHit = this.dayGrid.positionToHit(positionLeft, positionTop);
+        if (rawHit) {
+            return {
+                component: this.dayGrid,
+                dateSpan: rawHit.dateSpan,
+                dayEl: rawHit.dayEl,
+                rect: {
+                    left: rawHit.relativeRect.left,
+                    right: rawHit.relativeRect.right,
+                    top: rawHit.relativeRect.top,
+                    bottom: rawHit.relativeRect.bottom
+                },
+                layer: 0
+            };
+        }
+    };
+    return SimpleDayGrid;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["DateComponent"]));
+/* harmony default export */ __webpack_exports__["default"] = (SimpleDayGrid);
+var DayGridSlicer = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(DayGridSlicer, _super);
+    function DayGridSlicer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    DayGridSlicer.prototype.sliceRange = function (dateRange, dayTable) {
+        return dayTable.sliceRange(dateRange);
+    };
+    return DayGridSlicer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["Slicer"]));
+
+
 
 /***/ }),
 
@@ -251,7 +2152,85 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ \"./node_modules/tslib/tslib.es6.js\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n/* Event-rendering methods for the DayGrid class\r\n----------------------------------------------------------------------------------------------------------------------*/\r\n// \"Simple\" is bad a name. has nothing to do with SimpleDayGrid\r\nvar SimpleDayGridEventRenderer = /** @class */ (function (_super) {\r\n    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[\"__extends\"])(SimpleDayGridEventRenderer, _super);\r\n    function SimpleDayGridEventRenderer() {\r\n        return _super !== null && _super.apply(this, arguments) || this;\r\n    }\r\n    // Builds the HTML to be used for the default element for an individual segment\r\n    SimpleDayGridEventRenderer.prototype.renderSegHtml = function (seg, mirrorInfo) {\r\n        var _a = this.context, view = _a.view, options = _a.options;\r\n        var eventRange = seg.eventRange;\r\n        var eventDef = eventRange.def;\r\n        var eventUi = eventRange.ui;\r\n        var allDay = eventDef.allDay;\r\n        var isDraggable = view.computeEventDraggable(eventDef, eventUi);\r\n        var isResizableFromStart = allDay && seg.isStart && view.computeEventStartResizable(eventDef, eventUi);\r\n        var isResizableFromEnd = allDay && seg.isEnd && view.computeEventEndResizable(eventDef, eventUi);\r\n        var classes = this.getSegClasses(seg, isDraggable, isResizableFromStart || isResizableFromEnd, mirrorInfo);\r\n        var skinCss = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"cssToStr\"])(this.getSkinCss(eventUi));\r\n        var timeHtml = '';\r\n        var timeText;\r\n        var titleHtml;\r\n        classes.unshift('fc-day-grid-event', 'fc-h-event');\r\n        // Only display a timed events time if it is the starting segment\r\n        if (seg.isStart) {\r\n            timeText = this.getTimeText(eventRange);\r\n            if (timeText) {\r\n                timeHtml = '<span class=\"fc-time\">' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"htmlEscape\"])(timeText) + '</span>';\r\n            }\r\n        }\r\n        titleHtml =\r\n            '<span class=\"fc-title\">' +\r\n                (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"htmlEscape\"])(eventDef.title || '') || '&nbsp;') + // we always want one line of height\r\n                '</span>';\r\n        return '<a class=\"' + classes.join(' ') + '\"' +\r\n            (eventDef.url ?\r\n                ' href=\"' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"htmlEscape\"])(eventDef.url) + '\"' :\r\n                '') +\r\n            (skinCss ?\r\n                ' style=\"' + skinCss + '\"' :\r\n                '') +\r\n            '>' +\r\n            '<div class=\"fc-content\">' +\r\n            (options.dir === 'rtl' ?\r\n                titleHtml + ' ' + timeHtml : // put a natural space in between\r\n                timeHtml + ' ' + titleHtml //\r\n            ) +\r\n            '</div>' +\r\n            (isResizableFromStart ?\r\n                '<div class=\"fc-resizer fc-start-resizer\"></div>' :\r\n                '') +\r\n            (isResizableFromEnd ?\r\n                '<div class=\"fc-resizer fc-end-resizer\"></div>' :\r\n                '') +\r\n            '</a>';\r\n    };\r\n    // Computes a default event time formatting string if `eventTimeFormat` is not explicitly defined\r\n    SimpleDayGridEventRenderer.prototype.computeEventTimeFormat = function () {\r\n        return {\r\n            hour: 'numeric',\r\n            minute: '2-digit',\r\n            omitZeroMinute: true,\r\n            meridiem: 'narrow'\r\n        };\r\n    };\r\n    SimpleDayGridEventRenderer.prototype.computeDisplayEventEnd = function () {\r\n        return false; // TODO: somehow consider the originating DayGrid's column count\r\n    };\r\n    return SimpleDayGridEventRenderer;\r\n}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"FgEventRenderer\"]));\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (SimpleDayGridEventRenderer);\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\SimpleDayGridEventRenderer.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* Event-rendering methods for the DayGrid class
+----------------------------------------------------------------------------------------------------------------------*/
+// "Simple" is bad a name. has nothing to do with SimpleDayGrid
+var SimpleDayGridEventRenderer = /** @class */ (function (_super) {
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(SimpleDayGridEventRenderer, _super);
+    function SimpleDayGridEventRenderer() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    // Builds the HTML to be used for the default element for an individual segment
+    SimpleDayGridEventRenderer.prototype.renderSegHtml = function (seg, mirrorInfo) {
+        var _a = this.context, view = _a.view, options = _a.options;
+        var eventRange = seg.eventRange;
+        var eventDef = eventRange.def;
+        var eventUi = eventRange.ui;
+        var allDay = eventDef.allDay;
+        var isDraggable = view.computeEventDraggable(eventDef, eventUi);
+        var isResizableFromStart = allDay && seg.isStart && view.computeEventStartResizable(eventDef, eventUi);
+        var isResizableFromEnd = allDay && seg.isEnd && view.computeEventEndResizable(eventDef, eventUi);
+        var classes = this.getSegClasses(seg, isDraggable, isResizableFromStart || isResizableFromEnd, mirrorInfo);
+        var skinCss = Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["cssToStr"])(this.getSkinCss(eventUi));
+        var timeHtml = '';
+        var timeText;
+        var titleHtml;
+        classes.unshift('fc-day-grid-event', 'fc-h-event');
+        // Only display a timed events time if it is the starting segment
+        if (seg.isStart) {
+            timeText = this.getTimeText(eventRange);
+            if (timeText) {
+                timeHtml = '<span class="fc-time">' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["htmlEscape"])(timeText) + '</span>';
+            }
+        }
+        titleHtml =
+            '<span class="fc-title">' +
+                (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["htmlEscape"])(eventDef.title || '') || '&nbsp;') + // we always want one line of height
+                '</span>';
+        return '<a class="' + classes.join(' ') + '"' +
+            (eventDef.url ?
+                ' href="' + Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["htmlEscape"])(eventDef.url) + '"' :
+                '') +
+            (skinCss ?
+                ' style="' + skinCss + '"' :
+                '') +
+            '>' +
+            '<div class="fc-content">' +
+            (options.dir === 'rtl' ?
+                titleHtml + ' ' + timeHtml : // put a natural space in between
+                timeHtml + ' ' + titleHtml //
+            ) +
+            '</div>' +
+            (isResizableFromStart ?
+                '<div class="fc-resizer fc-start-resizer"></div>' :
+                '') +
+            (isResizableFromEnd ?
+                '<div class="fc-resizer fc-end-resizer"></div>' :
+                '') +
+            '</a>';
+    };
+    // Computes a default event time formatting string if `eventTimeFormat` is not explicitly defined
+    SimpleDayGridEventRenderer.prototype.computeEventTimeFormat = function () {
+        return {
+            hour: 'numeric',
+            minute: '2-digit',
+            omitZeroMinute: true,
+            meridiem: 'narrow'
+        };
+    };
+    SimpleDayGridEventRenderer.prototype.computeDisplayEventEnd = function () {
+        return false; // TODO: somehow consider the originating DayGrid's column count
+    };
+    return SimpleDayGridEventRenderer;
+}(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["FgEventRenderer"]));
+/* harmony default export */ __webpack_exports__["default"] = (SimpleDayGridEventRenderer);
+
 
 /***/ }),
 
@@ -262,7 +2241,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var tsli
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\main.scss");
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -274,7 +2253,26 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=C:\\Develop\\mjes
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ \"FullCalendar\");\n/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _DayGridView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DayGridView */ \"./src/DayGridView.ts\");\n\r\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__[\"createPlugin\"])({\r\n    defaultView: 'year',\r\n    views: {\r\n        yearGrid: _DayGridView__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\r\n        year: {\r\n            type: 'yearGrid',\r\n            duration: { years: 1 }\r\n        }\r\n    }\r\n}));\r\n\n\n//# sourceURL=C:\\Develop\\mjesteve\\LibreriasJS\\fullcalendar-yearview\\src\\main.ts");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ "./src/main.scss");
+/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! FullCalendar */ "FullCalendar");
+/* harmony import */ var _fullcalendar_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _DayGridView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DayGridView */ "./src/DayGridView.ts");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_fullcalendar_core__WEBPACK_IMPORTED_MODULE_1__["createPlugin"])({
+    defaultView: 'year',
+    views: {
+        yearGrid: _DayGridView__WEBPACK_IMPORTED_MODULE_2__["default"],
+        year: {
+            type: 'yearGrid',
+            duration: { years: 1 }
+        }
+    }
+}));
+
 
 /***/ }),
 
@@ -285,7 +2283,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = FullCalendar;\n\n//# sourceURL=external_%22FullCalendar%22");
+module.exports = FullCalendar;
 
 /***/ }),
 
@@ -296,8 +2294,9 @@ eval("module.exports = FullCalendar;\n\n//# sourceURL=external_%22FullCalendar%2
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = moment;\n\n//# sourceURL=external_%22moment%22");
+module.exports = moment;
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=main.js.map
