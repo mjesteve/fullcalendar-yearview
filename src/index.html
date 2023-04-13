@@ -30,6 +30,7 @@
                     center: 'title',
                     right: 'year,dayGridMonth'
                 },
+                height: 'parent',
                 selectable: true,
                 editable: true,
                 dateClick: function(info) {
@@ -38,7 +39,6 @@
                 select: function(info) {
                     document.getElementById('lblstatus').value = info.startStr + ' to ' + info.endStr;
                 },
-
                 defaultDate: '2023-01-01',
                 // navLinks: true, can click day/week names to navigate views
                 eventLimit: true, // allow "more" link when too many events
@@ -49,6 +49,25 @@
                         allDay: true,
                         editable: true,
                         extendedProps: {TipoFestivo: 'laboral', Color:'#ccc'}
+                    },
+                    // red areas where no events can be dropped
+                    {
+                        title: '001',
+                        start: '2023-08-24',
+                        end: '2023-08-24',
+                        allDay: true,
+                        overlap: true,
+                        rendering: 'background',
+                        color: '#ff9f89'
+                    },
+                    {
+                        title: '001',
+                        start: '2023-08-06',
+                        end: '2023-08-06',
+                        allDay: true,
+                        overlap: false,
+                        rendering: 'background',
+                        color: '#ff9f89'
                     },
                     {
                         groupId: 999,

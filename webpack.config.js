@@ -6,7 +6,7 @@ const HtmlWebpackPugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    //devtool: "sourcemap",
+    devtool: "sourcemap",
     devServer: {
         port: 9000,
         headers: {
