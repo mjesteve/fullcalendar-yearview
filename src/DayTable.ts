@@ -68,7 +68,13 @@ export default class DayTable {
   }
 
   private buildHeaderDates() {
-    return []
+    let dates = []
+
+    for (let col = 0; col < this.colCnt; col++) {
+      dates.push(this.cells[0][col].date)
+    }
+
+    return dates
   }
 
   sliceRange(range: DateRange): DayTableSeg[] {
@@ -83,44 +89,17 @@ export default class DayTable {
       // Hiedra: skip invalid dates
       for (let cellinvalid of this.invalidIndex) {
         
-        let value:number = 0
-
+        let value:number = cellinvalid.idxfin - cellinvalid.idxini + 1
         if (cellinvalid.idxini!=-1) {
 
-          if (firstIndex != lastIndex) {
-
             if (firstIndex >= cellinvalid.idxini) {
-                if (firstIndex >= cellinvalid.idxfin )
-                    value = cellinvalid.idxfin - cellinvalid.idxini + 1
-                else
-                    value = firstIndex - cellinvalid.idxini + 1
-
                 firstIndex += value
                 lastIndex += value
 
-            }else if (lastIndex >= cellinvalid.idxini) {
-                if(lastIndex >= cellinvalid.idxfin )
-                    value = cellinvalid.idxfin - cellinvalid.idxini + 1
-                else
-                    value = firstIndex - cellinvalid.idxini + 1
-
+            } else if (lastIndex >= cellinvalid.idxini) {
                 lastIndex += value
-
-            }else
+            } else
                 break;
-
-          }else{
-
-            if (firstIndex >= cellinvalid.idxini) {
-                value = cellinvalid.idxfin - cellinvalid.idxini + 1
-                firstIndex += value
-                lastIndex += value
-            }
-            
-            if (lastIndex > cellinvalid.idxfin)
-              break;
-          }
-
         }
       }
 

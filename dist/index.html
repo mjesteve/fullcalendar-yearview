@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'/>
-    <link href='../node_modules/@fullcalendar/core/main.css' rel='stylesheet'/>
-    <link href='../node_modules/@fullcalendar/daygrid/main.css' rel='stylesheet'/>
-    <link href='main.css' rel='stylesheet'/>
-    <script src='../node_modules/moment/min/moment-with-locales.min.js'></script>
-    <script src='../node_modules/@fullcalendar/core/main.js'></script>
-    <script src='../node_modules/@fullcalendar/core/locales-all.js'></script>
-    <script src='../node_modules/@fullcalendar/daygrid/main.js'></script>
-    <script src='../node_modules/@fullcalendar/interaction/main.js'></script>
-    <link href="main.css" rel="stylesheet">
-    <script src="main.js"></script>
-    <script>
-        var event1 =  [
+<!doctype html><html><head><meta charset="utf-8"/><link href="../node_modules/@fullcalendar/core/main.css" rel="stylesheet"/><link href="../node_modules/@fullcalendar/daygrid/main.css" rel="stylesheet"/><link href="main.css" rel="stylesheet"/><script src="../node_modules/moment/min/moment-with-locales.min.js"></script><script src="../node_modules/@fullcalendar/core/main.js"></script><script src="../node_modules/@fullcalendar/core/locales-all.js"></script><script src="../node_modules/@fullcalendar/daygrid/main.js"></script><script src="../node_modules/@fullcalendar/interaction/main.js"></script><script src="main.js"></script><script>var event1 =  [
         {   title: "Business Lunch",             start: "2023-09-03T13:00:00",            constraint: "businessHours"        },
         {   title: "Meeting",                    start: "2023-09-13T11:00:00",            constraint: "availableForMeeting",             color: '#0092c0'        },
         {   title: "Conference",                 start: "2023-09-18",           end: "2023-09-20"        },
@@ -103,12 +88,7 @@
         function getEvents(){
             var arrevents = calendar.getEvents();
             console.log(arrevents);
-        }
-
-    </script>
-    <style>
-
-        body {
+        }</script><style>body {
             margin: 40px 10px;
             padding: 0;
             font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -131,15 +111,4 @@
         .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
         float: right;
         font-size: 0.75em;
-        } */
-
-    </style>
-</head>
-<body>
-
-    <input id="lblstatus" value="0 de 0"/>
-    <button id="btget" onclick="getEvents()">Get Events</button>
-    <div id='calendar'></div>
-
-</body>
-</html>
+        } */</style></head><body><input id="lblstatus" value="0 de 0"/> <button id="btget" onclick="getEvents()">Get Events</button><div id="calendar"></div></body></html>

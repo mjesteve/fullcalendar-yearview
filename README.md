@@ -12,3 +12,5 @@ after the core FullCalendar files.
 ## Notes
 The code is basically a fork of the original FullCalendar DayGrid plugin with changes to achieve a full year display.
 The current version is based on FullCalendar 4.3.1. It may or may not work with other versions of FullCalendar.
+
+Node 13.14.0 required.
